@@ -182,6 +182,7 @@ public class ModBlocks {
     //public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlockWithoutBlockItem("mahogany_sign",
       //      () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));
 
+
     //  "render_type": "cutout"  - render layer in json models
 
 
