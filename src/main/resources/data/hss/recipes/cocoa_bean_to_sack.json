@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:cocoa_beans"
+    }
+  },
+  "result": {
+    "item": "hss:cocoa_bean_sack",
+    "count": 1
+  }
+}

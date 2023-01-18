@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "hss:block/orange_fir_leaves"
+  },
+  "render_type": "cutout"
+}

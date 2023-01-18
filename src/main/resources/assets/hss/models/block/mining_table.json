@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hss:block/mining_table_bottom",
+    "east": "hss:block/mining_table_front",
+    "north": "hss:block/mining_table_side",
+    "particle": "hss:block/mining_table_front",
+    "south": "hss:block/mining_table_side",
+    "up": "hss:block/mining_table_top",
+    "west": "hss:block/mining_table_front"
+  }
+}

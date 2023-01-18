@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hss:fir_log",
+    "hss:fir_wood",
+    "hss:stripped_fir_log",
+    "hss:stripped_fir_wood"
+  ]
+}

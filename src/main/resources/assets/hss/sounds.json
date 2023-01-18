@@ -1,0 +1,11 @@
+{
+  "heavy_step": {
+    "subtitle": "sounds.hss.heavy_step",
+    "sounds": [
+      "hss:heavystep1",
+      "hss:heavystep2",
+      "hss:heavystep3",
+      "hss:heavystep4"
+    ]
+  }
+}

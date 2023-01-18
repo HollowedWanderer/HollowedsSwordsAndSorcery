@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hss:block/fir_slab"
+    },
+    "type=double": {
+      "model": "hss:block/fir_planks"
+    },
+    "type=top": {
+      "model": "hss:block/fir_slab_top"
+    }
+  }
+}

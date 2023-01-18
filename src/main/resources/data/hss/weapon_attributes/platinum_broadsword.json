@@ -1,0 +1,6 @@
+{
+  "parent": "bettercombat:claymore",
+  "attributes": {
+    "attackRange": 3.75
+  }
+}

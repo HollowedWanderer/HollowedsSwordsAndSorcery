@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hss:block/sack_bottom",
+    "east": "hss:block/sack_side",
+    "north": "hss:block/sack_side",
+    "particle": "hss:block/sack_side",
+    "south": "hss:block/sack_side",
+    "up": "hss:block/cocoa_sack_top",
+    "west": "hss:block/sack_side"
+  }
+}

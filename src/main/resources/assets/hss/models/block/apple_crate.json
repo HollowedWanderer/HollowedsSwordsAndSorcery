@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hss:block/crate_bottom",
+    "east": "hss:block/apple_crate_side",
+    "north": "hss:block/apple_crate_side",
+    "particle": "hss:block/apple_crate_side",
+    "south": "hss:block/apple_crate_side",
+    "up": "hss:block/apple_crate_top",
+    "west": "hss:block/apple_crate_side"
+  }
+}

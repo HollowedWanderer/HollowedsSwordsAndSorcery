@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "hss:block/fir_planks",
+    "side": "hss:block/fir_planks",
+    "top": "hss:block/fir_planks"
+  }
+}

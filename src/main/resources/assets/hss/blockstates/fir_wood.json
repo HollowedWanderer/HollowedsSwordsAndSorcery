@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hss:block/fir_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hss:block/fir_wood"
+    },
+    "axis=z": {
+      "model": "hss:block/fir_wood",
+      "x": 90
+    }
+  }
+}

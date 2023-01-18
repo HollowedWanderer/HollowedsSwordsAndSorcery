@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "hss:block/sugar_cane_bundle_side",
+    "end": "hss:block/sugar_cane_bundle_top"
+  }
+}

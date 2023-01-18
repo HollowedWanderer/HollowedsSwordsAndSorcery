@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hss:block/bamboo_bundle",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hss:block/bamboo_bundle"
+    },
+    "axis=z": {
+      "model": "hss:block/bamboo_bundle",
+      "x": 90
+    }
+  }
+}

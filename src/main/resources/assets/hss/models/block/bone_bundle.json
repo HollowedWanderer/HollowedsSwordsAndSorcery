@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "hss:block/bone_bundle_side",
+    "end": "hss:block/bone_bundle_top"
+  }
+}

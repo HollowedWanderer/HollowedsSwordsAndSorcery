@@ -1,0 +1,18 @@
+{
+	"loader": "forge:separate-perspective",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/battlestaff_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/battlestaff_inventory"
+		},
+		"fixed": {
+			"parent": "hss:item/battlestaff_inventory"
+		},
+		"ground": {
+			"parent": "hss:item/battlestaff_inventory"
+		}
+	}
+}

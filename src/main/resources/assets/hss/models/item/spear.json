@@ -1,0 +1,26 @@
+{
+	"loader": "forge:separate-perspective",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/spear_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/spear_inventory"
+		},
+		"fixed": {
+			"parent": "hss:item/spear_inventory"
+		},
+		"ground": {
+			"parent": "hss:item/spear_inventory"
+		}
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"throwing": 1
+			},
+			"model": "hss:item/spear_throwing"
+		}
+	]
+}

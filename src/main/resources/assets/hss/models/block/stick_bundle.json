@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "hss:block/stick_side",
+    "end": "hss:block/stick_top"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "hss:steel_block",
+    "hss:platinum_block",
+    "hss:platinum_ore",
+    "hss:deepslate_platinum_ore",
+    "hss:bewitchment_table",
+    "hss:aetherium_block",
+    "hss:mythril_block",
+    "hss:bone_bundle",
+    "hss:charcoal_block"
+  ]
+}

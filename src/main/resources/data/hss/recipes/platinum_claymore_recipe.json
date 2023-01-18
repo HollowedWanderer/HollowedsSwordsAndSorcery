@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  #",
+    "#P ",
+    "/# "
+  ],
+  "key": {
+    "#": {
+      "item": "hss:platinum"
+    },
+    "P": {
+      "item": "hss:platinum_block"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "hss:platinum_claymore",
+    "count": 1
+  }
+}

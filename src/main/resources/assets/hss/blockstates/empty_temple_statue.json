@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hss:block/empty_temple_statue"
+    },
+    "facing=south": {
+      "model": "hss:block/empty_temple_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/empty_temple_statue",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "hss:block/empty_temple_statue",
+      "y": 90
+    }
+  }
+}

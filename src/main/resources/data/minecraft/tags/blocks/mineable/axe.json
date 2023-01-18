@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "hss:stick_bundle",
+    "hss:mining_table",
+    "hss:crate",
+    "hss:apple_crate",
+    "hss:potato_crate",
+    "hss:bamboo_bundle",
+    "hss:mahogany_planks",
+    "hss:mahogany_stairs",
+    "hss:mahogany_fence",
+    "hss:mahogany_fence_gate",
+    "hss:mahogany_log",
+    "hss:stripped_mahogany_log",
+    "hss:stripped_mahogany_wood",
+    "hss:mahogany_wood",
+    "hss:mahogany_slab",
+    "hss:fir_planks",
+    "hss:fir_stairs",
+    "hss:fir_fence",
+    "hss:fir_fence_gate",
+    "hss:fir_log",
+    "hss:stripped_fir_log",
+    "hss:stripped_fir_wood",
+    "hss:fir_wood",
+    "hss:fir_slab"
+  ]
+}

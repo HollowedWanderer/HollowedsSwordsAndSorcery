@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hss:mahogany_log",
+    "hss:mahogany_wood",
+    "hss:stripped_mahogany_log",
+    "hss:stripped_mahogany_wood"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hss:block/crate_bottom",
+    "east": "hss:block/potato_crate_side",
+    "north": "hss:block/potato_crate_side",
+    "particle": "hss:block/potato_crate_side",
+    "south": "hss:block/potato_crate_side",
+    "up": "hss:block/potato_crate_top",
+    "west": "hss:block/potato_crate_side"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "bettercombat:sword",
+  "attributes": {
+    "attackRange": 3
+  }
+}

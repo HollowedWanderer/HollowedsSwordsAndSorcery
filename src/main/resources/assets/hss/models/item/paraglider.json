@@ -1,0 +1,18 @@
+{
+	"loader": "forge:separate-perspective",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/paraglider_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/paraglider_inventory"
+		},
+		"fixed": {
+			"parent": "hss:item/paraglider_inventory"
+		},
+		"ground": {
+			"parent": "hss:item/paraglider_inventory"
+		}
+	}
+}

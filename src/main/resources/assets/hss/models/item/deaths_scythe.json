@@ -1,0 +1,18 @@
+{
+	"loader": "forge:separate-perspective",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/deaths_scythe_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/deaths_scythe_inventory"
+		},
+		"fixed": {
+			"parent": "hss:item/deaths_scythe_inventory"
+		},
+		"ground": {
+			"parent": "hss:item/deaths_scythe_inventory"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "hss:item/wrought_soul_pearl"
+	},
+	"display": {
+		"gui_light": "front"
+	}
+}

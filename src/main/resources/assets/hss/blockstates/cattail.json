@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "hss:block/cattail_bottom"
+    },
+    "half=upper": {
+      "model": "hss:block/cattail_top"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "loader": "forge:separate-perspective",
+  "base": {
+    "parent": "hss:item/test_model_item_hand"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hss:item/test_model_item_inventory"
+    },
+    "fixed": {
+      "parent": "hss:item/test_model_item_inventory"
+    },
+    "ground": {
+      "parent": "hss:item/test_model_item_inventory"
+    }
+  }
+}

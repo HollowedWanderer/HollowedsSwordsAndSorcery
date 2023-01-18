@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "hss:aetherium_ingot"
+    }
+  },
+  "result": {
+    "item": "hss:aetherium_block",
+    "count": 1
+  }
+}

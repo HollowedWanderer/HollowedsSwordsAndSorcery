@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hss:block/mahogany_slab"
+    },
+    "type=double": {
+      "model": "hss:block/mahogany_planks"
+    },
+    "type=top": {
+      "model": "hss:block/mahogany_slab_top"
+    }
+  }
+}
