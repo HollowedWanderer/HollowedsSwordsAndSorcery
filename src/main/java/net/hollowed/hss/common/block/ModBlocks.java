@@ -183,6 +183,7 @@ public class ModBlocks {
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));
 
 
+    // - INFO -
     //  "render_type": "cutout"  - render layer in json models
 
 
