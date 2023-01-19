@@ -19,5 +19,6 @@ public class ModBlockEntities {
                             ModBlocks.MAHOGANY_WALL_SIGN.get(),
                             ModBlocks.MAHOGANY_SIGN.get()).build(null));
 
+
     public static void register(IEventBus eventBus) { BLOCK_ENTITIES.register(eventBus); }
 }
