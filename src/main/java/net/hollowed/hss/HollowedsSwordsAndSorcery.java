@@ -85,6 +85,7 @@ public class HollowedsSwordsAndSorcery {
 
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
