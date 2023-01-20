@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "hss:item/mahogany_sign_item"
+		"layer0": "hss:item/mahogany_sign"
 	}
 }

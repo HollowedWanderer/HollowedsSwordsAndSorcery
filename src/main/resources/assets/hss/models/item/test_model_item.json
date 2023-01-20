@@ -1,5 +1,5 @@
 {
-  "loader": "forge:separate-perspective",
+  "loader": "forge:separate-transforms",
   "base": {
     "parent": "hss:item/test_model_item_hand"
   },

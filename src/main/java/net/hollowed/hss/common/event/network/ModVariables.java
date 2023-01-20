@@ -1,4 +1,4 @@
-package net.hollowed.hss.common.network;
+package net.hollowed.hss.common.event.network;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.minecraftforge.network.PacketDistributor;
@@ -25,12 +25,14 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
+import org.jetbrains.annotations.NotNull;
 
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModVariables {
+
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
         HollowedsSwordsAndSorcery.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new,
@@ -73,16 +75,18 @@ public class ModVariables {
             PlayerVariables clone = event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
                     .orElse(new PlayerVariables());
             clone.FireRiderCooldown = original.FireRiderCooldown;
-            if (!event.isWasDeath()) {
-            }
+//            if (!event.isWasDeath()) {
+//            }
         }
     }
 
-    public static final Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = CapabilityManager.get(new CapabilityToken<PlayerVariables>() {
+    public static final Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY =
+            CapabilityManager.get(new CapabilityToken<>() {
     });
 
     @Mod.EventBusSubscriber
     private static class PlayerVariablesProvider implements ICapabilitySerializable<Tag> {
+
         @SubscribeEvent
         public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
             if (event.getObject() instanceof Player && !(event.getObject() instanceof FakePlayer))
@@ -92,8 +96,9 @@ public class ModVariables {
         private final PlayerVariables playerVariables = new PlayerVariables();
         private final LazyOptional<PlayerVariables> instance = LazyOptional.of(() -> playerVariables);
 
+        @NotNull
         @Override
-        public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
+        public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
             return cap == PLAYER_VARIABLES_CAPABILITY ? instance.cast() : LazyOptional.empty();
         }
 
@@ -113,7 +118,8 @@ public class ModVariables {
 
         public void syncPlayerVariables(Entity entity) {
             if (entity instanceof ServerPlayer serverPlayer)
-                HollowedsSwordsAndSorcery.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
+                HollowedsSwordsAndSorcery.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(
+                        () -> serverPlayer), new PlayerVariablesSyncMessage(this));
         }
 
         public Tag writeNBT() {
@@ -148,6 +154,7 @@ public class ModVariables {
             NetworkEvent.Context context = contextSupplier.get();
             context.enqueueWork(() -> {
                 if (!context.getDirection().getReceptionSide().isServer()) {
+                    assert Minecraft.getInstance().player != null;
                     PlayerVariables variables = Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
                             .orElse(new PlayerVariables());
                     variables.FireRiderCooldown = message.data.FireRiderCooldown;

@@ -4,4 +4,5 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class ModWoodTypes {
     public static WoodType MAHOGANY = WoodType.create("mahogany");
+    public static WoodType CINNAMON = WoodType.create("cinnamon");
 }
