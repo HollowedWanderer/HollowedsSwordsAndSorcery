@@ -1,6 +1,5 @@
 package net.hollowed.hss.common.world.feature.tree;
 
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;

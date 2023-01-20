@@ -1,4 +1,4 @@
-package net.hollowed.hss.common.network;
+package net.hollowed.hss.common.event.network;
 
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.fml.common.Mod;

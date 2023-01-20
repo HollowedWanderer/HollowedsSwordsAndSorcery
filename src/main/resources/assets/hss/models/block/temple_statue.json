@@ -1,5 +1,6 @@
 {
   "texture_size": [64, 64],
+  "render_type": "cutout",
   "textures": {
     "particle": "hss:item/empty_temple_statue",
     "2": "hss:block/temple_statue"

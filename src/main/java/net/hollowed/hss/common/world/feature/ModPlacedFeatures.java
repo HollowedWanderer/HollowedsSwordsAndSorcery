@@ -1,7 +1,6 @@
 package net.hollowed.hss.common.world.feature;
 
 
-import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.block.ModBlocks;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -14,10 +13,11 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
+import static net.hollowed.hss.HollowedsSwordsAndSorcery.MOD_ID;
+
 public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, HollowedsSwordsAndSorcery.MOD_ID);
-
+            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, MOD_ID);
 
     public static final RegistryObject<PlacedFeature> PLATINUM_ORE_PLACED = PLACED_FEATURES.register("platinum_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.PLATINUM_ORE.getHolder().get(),
@@ -32,15 +32,14 @@ public class ModPlacedFeatures {
 //            ModConfiguredFeatures.CLOVER, RarityFilter.onAverageOnceEvery(16),
 //            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
+//
+//    public static final RegistryObject<PlacedFeature> END_ZIRCON_ORE_PLACED = PLACED_FEATURES.register("end_zircon_ore_placed",
+//            () -> new PlacedFeature(ModConfiguredFeatures.END_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+//                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
-    //public static final RegistryObject<PlacedFeature> END_ZIRCON_ORE_PLACED = PLACED_FEATURES.register("end_zircon_ore_placed",
-    //        () -> new PlacedFeature(ModConfiguredFeatures.END_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
-    //                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    //public static final RegistryObject<PlacedFeature> NETHER_ZIRCON_ORE_PLACED = PLACED_FEATURES.register("nether_zircon_ore_placed",
-    //        () -> new PlacedFeature(ModConfiguredFeatures.NETHER_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
-    //                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
+//    public static final RegistryObject<PlacedFeature> NETHER_ZIRCON_ORE_PLACED = PLACED_FEATURES.register("nether_zircon_ore_placed",
+//            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+//                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
     public static final RegistryObject<PlacedFeature> MAHOGANY_TREE_CHECKED = PLACED_FEATURES.register("mahogany_tree_checked",
             () -> new PlacedFeature(ModConfiguredFeatures.MAHOGANY_TREE.getHolder().get(),

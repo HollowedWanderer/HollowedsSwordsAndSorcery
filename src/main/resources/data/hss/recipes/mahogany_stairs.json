@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "P": {
-      "item": "hss:mahogany_planks"
-    }
-  },
   "pattern": [
     "P  ",
     "PP ",
     "PPP"
   ],
+
+  "key": {
+    "P": {
+      "item": "hss:mahogany_planks"
+    }
+  },
+
   "result": {
     "item": "hss:mahogany_stairs",
     "count": 4

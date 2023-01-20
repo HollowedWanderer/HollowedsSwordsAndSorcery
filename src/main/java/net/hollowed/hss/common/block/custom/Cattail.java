@@ -1,10 +1,5 @@
 package net.hollowed.hss.common.block.custom;
 
-import javax.annotation.Nullable;
-
-import net.hollowed.hss.common.block.ModBlocks;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -33,8 +28,9 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.Nullable;
 
 public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
@@ -47,7 +43,9 @@ public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
-    public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor accessor, BlockPos blockPos, BlockPos pos) {
+    @Override
+    public @NotNull BlockState updateShape(BlockState state, Direction direction, @NotNull BlockState blockState,
+                                           @NotNull LevelAccessor accessor, @NotNull BlockPos blockPos, @NotNull BlockPos pos) {
         DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
 
         if (direction.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (direction == Direction.UP) || blockState.is(this) && blockState.getValue(HALF) != doubleblockhalf) {
@@ -55,7 +53,6 @@ public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
         } else {
             return Blocks.AIR.defaultBlockState();
         }
-
     }
 
     @Override
@@ -71,29 +68,32 @@ public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public FluidState getFluidState(BlockState state) {
+    public @NotNull FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter world,
+                                        @NotNull BlockPos pos, @NotNull CollisionContext context) {
         Vec3 offset = state.getOffset(world, pos);
         return box(1, 0, 1, 15, 16, 15).move(offset.x, offset.y, offset.z);
     }
 
-
-
-    public void setPlacedBy(Level p_52872_, BlockPos p_52873_, BlockState p_52874_, LivingEntity p_52875_, ItemStack p_52876_) {
+    @Override
+    public void setPlacedBy(Level p_52872_, BlockPos p_52873_,
+                            @NotNull BlockState pState, LivingEntity p_52875_, @NotNull ItemStack pStack) {
         BlockPos blockpos = p_52873_.above();
-        p_52872_.setBlock(blockpos, copyWaterloggedFrom(p_52872_, blockpos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER)), 3);
+        p_52872_.setBlock(blockpos, copyWaterloggedFrom(p_52872_, blockpos,
+                this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER)), 3);
     }
 
-    public boolean canSurvive(BlockState p_52887_, LevelReader p_52888_, BlockPos p_52889_) {
+    @Override
+    public boolean canSurvive(BlockState p_52887_, @NotNull LevelReader pLevel, @NotNull BlockPos pPos) {
         if (p_52887_.getValue(HALF) != DoubleBlockHalf.UPPER) {
-            return super.canSurvive(p_52887_, p_52888_, p_52889_);
+            return super.canSurvive(p_52887_, pLevel, pPos);
         } else {
-            BlockState blockstate = p_52888_.getBlockState(p_52889_.below());
-            if (p_52887_.getBlock() != this) return super.canSurvive(p_52887_, p_52888_, p_52889_); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
+            BlockState blockstate = pLevel.getBlockState(pPos.below());
+            if (p_52887_.getBlock() != this) return super.canSurvive(p_52887_, pLevel, pPos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
             return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
         }
     }
@@ -105,10 +105,12 @@ public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
     }
 
     public static BlockState copyWaterloggedFrom(LevelReader p_182454_, BlockPos p_182455_, BlockState p_182456_) {
-        return p_182456_.hasProperty(BlockStateProperties.WATERLOGGED) ? p_182456_.setValue(BlockStateProperties.WATERLOGGED, Boolean.valueOf(p_182454_.isWaterAt(p_182455_))) : p_182456_;
+        return p_182456_.hasProperty(BlockStateProperties.WATERLOGGED) ? p_182456_.setValue(
+                BlockStateProperties.WATERLOGGED, p_182454_.isWaterAt(p_182455_)) : p_182456_;
     }
 
-    public void playerWillDestroy(Level p_52878_, BlockPos p_52879_, BlockState p_52880_, Player p_52881_) {
+    @Override
+    public void playerWillDestroy(Level p_52878_, @NotNull BlockPos p_52879_, @NotNull BlockState p_52880_, @NotNull Player p_52881_) {
         if (!p_52878_.isClientSide) {
             if (p_52881_.isCreative()) {
                 preventCreativeDropFromBottomPart(p_52878_, p_52879_, p_52880_, p_52881_);
@@ -120,33 +122,35 @@ public class Cattail extends BushBlock implements SimpleWaterloggedBlock {
         super.playerWillDestroy(p_52878_, p_52879_, p_52880_, p_52881_);
     }
 
-    public void playerDestroy(Level p_52865_, Player p_52866_, BlockPos p_52867_, BlockState p_52868_, @Nullable BlockEntity p_52869_, ItemStack p_52870_) {
-        super.playerDestroy(p_52865_, p_52866_, p_52867_, Blocks.AIR.defaultBlockState(), p_52869_, p_52870_);
+    @Override
+    public void playerDestroy(@NotNull Level pLevel, @NotNull Player pPlayer, @NotNull BlockPos pPos,
+                              @NotNull BlockState pState, @Nullable BlockEntity pBlockEntity, @NotNull ItemStack pTool) {
+        super.playerDestroy(pLevel, pPlayer, pPos, Blocks.AIR.defaultBlockState(), pBlockEntity, pTool);
     }
 
-    protected static void preventCreativeDropFromBottomPart(Level p_52904_, BlockPos p_52905_, BlockState p_52906_, Player p_52907_) {
-        DoubleBlockHalf doubleblockhalf = p_52906_.getValue(HALF);
+    protected static void preventCreativeDropFromBottomPart(Level level, BlockPos blockPos, BlockState blockState, Player player) {
+        DoubleBlockHalf doubleblockhalf = blockState.getValue(HALF);
         if (doubleblockhalf == DoubleBlockHalf.UPPER) {
-            BlockPos blockpos = p_52905_.below();
-            BlockState blockstate = p_52904_.getBlockState(blockpos);
-            if (blockstate.is(p_52906_.getBlock()) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER) {
-                BlockState blockstate1 = blockstate.hasProperty(BlockStateProperties.WATERLOGGED) && blockstate.getValue(BlockStateProperties.WATERLOGGED) ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
-                p_52904_.setBlock(blockpos, blockstate1, 35);
-                p_52904_.levelEvent(p_52907_, 2001, blockpos, Block.getId(blockstate));
+            BlockPos blockpos = blockPos.below();
+            BlockState blockstate = level.getBlockState(blockpos);
+            if (blockstate.is(blockState.getBlock()) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER) {
+                BlockState blockstate1 = blockstate.hasProperty(BlockStateProperties.WATERLOGGED) && blockstate
+                        .getValue(BlockStateProperties.WATERLOGGED) ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
+                level.setBlock(blockpos, blockstate1, 35);
+                level.levelEvent(player, 2001, blockpos, Block.getId(blockstate));
             }
         }
 
     }
 
-    public long getSeed(BlockState p_52891_, BlockPos p_52892_) {
-        return Mth.getSeed(p_52892_.getX(), p_52892_.below(p_52891_.getValue(HALF) == DoubleBlockHalf.LOWER ? 0 : 1).getY(), p_52892_.getZ());
+    @Override
+    public long getSeed(BlockState pState, BlockPos pPos) {
+        return Mth.getSeed(pPos.getX(), pPos.below(pState.getValue(HALF) == DoubleBlockHalf.LOWER ? 0 : 1).getY(), pPos.getZ());
     }
 
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CATTAIL.get(), renderType -> renderType == RenderType.cutout());
-    }
+//    @OnlyIn(Dist.CLIENT)
+//    public static void registerRenderLayer() {
+//    }
 
 }
 

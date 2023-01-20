@@ -1,51 +1,14 @@
 {
-  "item.hss.test_item": "Test Item",
-  "item.hss.test_model_item": "Test Model Item",
-
-  "item.hss.staff_of_thundering": "Stormcaller's Staff",
-  "item.hss.eternal_golden_carrot": "Eternal Golden Carrot",
-  "item.hss.steel_ingot": "Steel Ingot",
-  "block.hss.temple_statue": "Temple Statue",
-  "block.hss.empty_temple_statue": "Empty Temple Statue",
-  "itemGroup.holloweds_swords_and_sorcery_tab": "Swords & Sorcery",
-  "item.hss.spear": "Spear[WIP]",
-  "item.hss.platinum": "Platinum",
-  "item.hss.steel_sword": "Steel Sword",
-  "item.hss.steel_pickaxe": "Steel Pickaxe",
-  "item.hss.steel_axe": "Steel Axe",
-  "item.hss.steel_shovel": "Steel Shovel",
-  "item.hss.steel_hoe": "Steel Hoe",
-  "item.hss.infinity_dust": "Infinity Dust",
-  "item.hss.ender_dust": "Ender Dust",
-  "item.hss.platinum_sword": "Platinum Sword",
-  "item.hss.platinum_pickaxe": "Platinum Pickaxe",
-  "item.hss.platinum_axe": "Platinum Axe",
-  "item.hss.platinum_shovel": "Platinum Shovel",
-  "item.hss.platinum_hoe": "Platinum Hoe",
-  "item.hss.platinum_broadsword": "Platinum Broadsword",
-  "item.hss.great_hammer": "Great Hammer",
-  "item.hss.battlestaff": "Battlestaff",
-  "item.hss.gauntlet": "Gauntlet",
   "block.hss.platinum_ore": "Platinum Ore",
   "block.hss.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.hss.clover": "Clover",
-  "item.hss.winged_medallion": "Winged Medallion",
-  "curios.identifier.feet": "Feet",
-  "curios.modifiers.feet": "When on feet:",
-  "item.hss.nightshade_cloak": "Nightshade Cloak",
-  "key.category.hss.hss": "Hollowed's Swords & Sorcery",
-  "key.hss.fire_ring": "Fire Ring",
+
   "block.hss.cattail": "Cattail",
   "block.hss.mining_table": "Mining Table",
   "block.hss.apple_crate": "Apple Crate",
-  "item.hss.mythril_ingot": "Mythril Ingot",
-  "item.hss.aetherium_ingot": "Aetherium Ingot",
-  "entity.minecraft.villager.hss.spelunker": "Spelunker",
-  "item.hss.glaive": "Glaive",
-  "block.hss.bewitchment_table": "Bewitchment Table",
-  "item.hss.deaths_scythe": "Death's Scythe",
-  "item.hss.wrought_spearman_spawn_egg": "Wrought Spearman Spawn Egg",
-  "item.hss.wrought_swordsman_spawn_egg": "Wrought Swordsman Spawn Egg",
+
+  "block.hss.temple_statue": "Temple Statue",
+  "block.hss.empty_temple_statue": "Empty Temple Statue",
 
   "block.hss.aetherium_block": "Aetherium Block",
   "block.hss.mythril_block": "Mythril Block",
@@ -86,8 +49,6 @@
   "block.hss.mahogany_pressure_plate": "Mahogany Pressure Plate",
   "block.hss.mahogany_sign": "Mahogany Sign [WIP]",
 
-  "sounds.hss.heavy_step": "Heavy Creature Steps",
-
   "block.hss.stripped_fir_log": "Stripped Fir Log",
   "block.hss.fir_wood": "Fir Wood",
   "block.hss.stripped_fir_wood": "Stripped Fir Log",
@@ -105,8 +66,60 @@
   "block.hss.fir_button": "Fir Button",
   "block.hss.fir_pressure_plate": "Fir Pressure Plate",
 
+  "block.hss.cinnamon_sign": "Cinnamon Sign",
+
+  "block.hss.bewitchment_table": "Bewitchment Table",
+
+  "item.hss.staff_of_thundering": "Stormcaller's Staff",
+  "item.hss.eternal_golden_carrot": "Eternal Golden Carrot",
+  "item.hss.steel_ingot": "Steel Ingot",
+  "item.hss.spear": "Spear[WIP]",
+  "item.hss.platinum": "Platinum",
+  "item.hss.steel_sword": "Steel Sword",
+  "item.hss.steel_pickaxe": "Steel Pickaxe",
+  "item.hss.steel_axe": "Steel Axe",
+  "item.hss.steel_shovel": "Steel Shovel",
+  "item.hss.steel_hoe": "Steel Hoe",
+  "item.hss.infinity_dust": "Infinity Dust",
+  "item.hss.ender_dust": "Ender Dust",
+  "item.hss.platinum_sword": "Platinum Sword",
+  "item.hss.platinum_pickaxe": "Platinum Pickaxe",
+  "item.hss.platinum_axe": "Platinum Axe",
+  "item.hss.platinum_shovel": "Platinum Shovel",
+  "item.hss.platinum_hoe": "Platinum Hoe",
+  "item.hss.platinum_broadsword": "Platinum Broadsword",
+  "item.hss.great_hammer": "Great Hammer",
+  "item.hss.battlestaff": "Battlestaff",
+  "item.hss.gauntlet": "Gauntlet",
+  "item.hss.winged_medallion": "Winged Medallion",
+  "item.hss.nightshade_cloak": "Nightshade Cloak",
+
+  "item.hss.mythril_ingot": "Mythril Ingot",
+  "item.hss.aetherium_ingot": "Aetherium Ingot",
+
+  "item.hss.glaive": "Glaive",
+
+  "item.hss.deaths_scythe": "Death's Scythe",
+  "item.hss.wrought_spearman_spawn_egg": "Wrought Spearman Spawn Egg",
+  "item.hss.wrought_swordsman_spawn_egg": "Wrought Swordsman Spawn Egg",
+
+  "item.hss.test_item": "Test Item",
+  "item.hss.test_model_item": "Test Model Item",
+
+  "itemGroup.holloweds_swords_and_sorcery_tab": "Swords & Sorcery",
+
+  "curios.identifier.feet": "Feet",
+  "curios.modifiers.feet": "When on feet:",
+
+  "key.category.hss.hss": "Hollowed's Swords & Sorcery",
+  "key.hss.fire_ring": "Fire Ring",
+
+  "entity.minecraft.villager.hss.spelunker": "Spelunker",
   "entity.hss.wrought_spearman": "Wrought Spearman",
   "entity.hss.wrought_swordsman": "Wrought Swordsman",
   "entity.hss.deepslate_golem": "Deepslate Golem",
-  "entity.hss.wrought_sentinel": "Wrought Sentinel"
+  "entity.hss.wrought_sentinel": "Wrought Sentinel",
+
+  "sounds.hss.heavy_step": "Heavy Creature Steps"
+
 }
