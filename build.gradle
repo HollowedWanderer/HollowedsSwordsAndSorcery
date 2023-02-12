@@ -1,12 +1,22 @@
-plugins {
-    id 'eclipse'
-    id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+buildscript {
+
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
+    }
 }
 
-version = '0.0.1'
-group = 'net.hollowed.hss' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+plugins {
+
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+
+    id 'maven-publish'
+    id 'eclipse'
+}
+
+version = '0.0.1-1.19.2'
+group = 'net.hollowed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
 java {
     archivesBaseName = 'hss'
@@ -15,7 +25,8 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
-println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+// println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
@@ -59,10 +70,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'firstmod'
+            property 'forge.enabledGameTestNamespaces', 'hss'
 
             mods {
-                firstmod {
+                hss {
                     source sourceSets.main
                 }
             }
@@ -80,10 +91,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'firstmod'
+            property 'forge.enabledGameTestNamespaces', 'hss'
 
             mods {
-                firstmod {
+                hss {
                     source sourceSets.main
                 }
             }
@@ -100,10 +111,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'firstmod'
+            property 'forge.enabledGameTestNamespaces', 'hss'
 
             mods {
-                firstmod {
+                hss {
                     source sourceSets.main
                 }
             }
@@ -117,10 +128,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'firstmod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'hss', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                firstmod {
+                hss {
                     source sourceSets.main
                 }
             }
@@ -132,14 +143,17 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
+    // JEI
+    maven { name = "Progwm16 maven";    url = "https://dvs1.progwml6.com//files/maven/" }
+    // JEI fall back
+    maven { name = "ModMaven";          url = "https://modmaven.dev" }
 
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    // flatDir {
-    //     dir 'libs'
-    // }
-    maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    // Maven via Curse-Maven & CurseForge
+    maven { name = "Curese Mavem";      url = "https://cursemaven.com"; content { includeGroup "curse.maven" } }
+    maven { name = "CurseForge";        url = "https://minecraft.curseforge.com/api/maven/" }
+
+    // GeckoLibs
+    maven { name = "Gecko Libs 3";      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url = "https://maven.theillusivec4.top/" }
 }
 
@@ -147,7 +161,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.3'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.2.4'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -160,11 +174,13 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-        runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5")
-        compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5:api")
+
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5:api")
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.14')
-   // implementation fg.deobf('maven.modrinth:better-combat:1.5.3+1.19-forge')
-   // implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.1+1.19.3")
+
+    // implementation fg.deobf('maven.modrinth:better-combat:1.5.3+1.19-forge')
+    // implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.1+1.19.3")
 
 }
 
@@ -172,12 +188,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "firstmod",
-                "Specification-Vendor"    : "firstmodsareus",
+                "Specification-Title"     : "hss",
+                "Specification-Vendor"    : "Hollowed Wanderer",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "firstmodsareus",
+                "Implementation-Vendor"   : "Hollowed Wanderer",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
