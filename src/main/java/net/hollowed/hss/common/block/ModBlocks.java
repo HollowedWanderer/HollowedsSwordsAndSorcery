@@ -140,10 +140,10 @@ public class ModBlocks {
                     .noOcclusion().sound(SoundType.WOOD)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
 
     public static final RegistryObject<Block> MAHOGANY_WALL_SIGN = registerBlockWithoutBlockItem("mahogany_wall_sign",
-            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.MAHOGANY));
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noCollission(), ModWoodTypes.MAHOGANY));
 
     public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlockWithoutBlockItem("mahogany_sign",
-            () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.MAHOGANY));
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noCollission(), ModWoodTypes.MAHOGANY));
 
 
     /** Cinnamon */
@@ -198,7 +198,7 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
                     true, 5, 20) , ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
     public static final RegistryObject<Block> FIR_STAIRS = registerBlock("fir_stairs",
-            () -> new StairBlock(() -> ModBlocks.MAHOGANY_PLANKS.get().defaultBlockState(),
+            () -> new StairBlock(() -> ModBlocks.FIR_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
                             .strength(2f, 3f)),ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
     public static final RegistryObject<Block> FIR_SLAB = registerBlock("fir_slab",
