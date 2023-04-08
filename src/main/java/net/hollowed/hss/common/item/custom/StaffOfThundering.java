@@ -38,15 +38,10 @@ public class StaffOfThundering extends SwordItem {
                   }
               },
 
-                3, -2.7999999999999998f,
+                -4, -2.7999999999999998f,
 
                 new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB));
     }
-
-
-
-
-
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
@@ -59,5 +54,7 @@ public class StaffOfThundering extends SwordItem {
         StaffOfThunderingRightclick.execute(world, entity, itemstack);
         return ar;
     }
+
+
 }
 

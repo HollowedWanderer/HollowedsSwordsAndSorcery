@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "PPP",
+    "PPP"
+  ],
+
+  "key": {
+    "P": {
+      "item": "hss:mahogany_planks"
+    }
+  },
+
+  "result": {
+    "item": "hss:mahogany_trapdoor",
+    "count": 2
+  }
+}

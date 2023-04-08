@@ -4,16 +4,18 @@
   "block.hss.clover": "Clover",
 
   "block.hss.cattail": "Cattail",
-  "block.hss.mining_table": "Mining Table",
+  "block.hss.mining_table": "Gem Cutter",
   "block.hss.apple_crate": "Apple Crate",
+  "block.hss.mixed_bricks": "Mixed Bricks",
 
   "block.hss.temple_statue": "Temple Statue",
   "block.hss.empty_temple_statue": "Empty Temple Statue",
 
-  "block.hss.aetherium_block": "Aetherium Block",
+  "block.hss.aerialite_block": "Aerialite Block",
   "block.hss.mythril_block": "Mythril Block",
   "block.hss.platinum_block": "Platinum Block",
   "block.hss.steel_block": "Block of Steel",
+  "block.hss.fictation_steel_block": "Block of Fictation Steel",
 
   "block.hss.crate": "Crate",
   "block.hss.potato_crate": "Potato Crate",
@@ -57,6 +59,7 @@
   "block.hss.fir_leaves": "Green Fir Leaves",
   "block.hss.orange_fir_leaves": "Orange Fir Leaves",
   "block.hss.green_fir_sapling": "Green Fir Sapling",
+  "block.hss.orange_fir_sapling": "Orange Fir Sapling",
   "block.hss.fir_stairs": "Fir Stairs",
   "block.hss.fir_slab": "Fir Slab",
   "block.hss.fir_fence": "Fir Fence",
@@ -70,7 +73,7 @@
 
   "block.hss.bewitchment_table": "Bewitchment Table",
 
-  "item.hss.staff_of_thundering": "Stormcaller's Staff",
+  "item.hss.staff_of_thundering": "Stormcaller's Rod",
   "item.hss.eternal_golden_carrot": "Eternal Golden Carrot",
   "item.hss.steel_ingot": "Steel Ingot",
   "item.hss.spear": "Spear[WIP]",

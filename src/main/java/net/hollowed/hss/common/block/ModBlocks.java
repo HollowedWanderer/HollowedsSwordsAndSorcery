@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -167,6 +168,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_FIR_SAPLING = registerBlock("green_fir_sapling",
             () -> new FirSapling(new NullTree(),
                     BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
+    public static final RegistryObject<Block> ORANGE_FIR_SAPLING = registerBlock("orange_fir_sapling",
+            () -> new OrangeFirSapling(new NullTree(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
 
     /** Tip <p>
      * If you create flammable Blocks by using the 3 methods isFlammable, Flammability and FireSpreadSpeed <p>
@@ -229,7 +233,6 @@ public class ModBlocks {
             () -> new Cattail(BlockBehaviour.Properties.of(Material.PLANT)
                     .noCollission().instabreak().sound(SoundType.GRASS)
                     .offsetType(BlockBehaviour.OffsetType.XZ)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
-
     public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore",
             PlatinumOre::new, ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
     public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore",
@@ -242,6 +245,22 @@ public class ModBlocks {
             () -> new EmptyTempleStatue(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).requiresCorrectToolForDrops().noOcclusion()
                     .sound(SoundType.POLISHED_DEEPSLATE)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
+
+    // - - Decorative Blocks - -
+
+    public static final RegistryObject<Block> MIXED_BRICKS = registerBlock("mixed_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops()
+                    .strength(2.0F, 6.0F)), ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
+   /** public static final RegistryObject<Block> MIXED_BRICK_STAIRS = registerBlock("fir_stairs",
+            () -> new StairBlock(() -> ModBlocks.FIR_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
+                            .strength(2f, 3f)),ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
+    public static final RegistryObject<Block> FIR_SLAB = registerBlock("fir_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
+                    .strength(2f, 3f)),ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB);
+    public static final RegistryObject<Block> FIR_FENCE = registerBlock("fir_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
+                    .strength(2f, 3f)),ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB); **/
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
