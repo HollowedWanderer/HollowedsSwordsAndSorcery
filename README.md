@@ -4,6 +4,6 @@ Hollowed's Swords & Sorcery is Minecraft mod that's all about creating more imme
 
 
 
-Any suggestions or issues may be brought up on this repository. However note that not all suggestions will be accounted for.
+Any suggestions or issues may be brought up on this repository or discord server. However note that not all suggestions will be accounted for.
 
 
