@@ -20,10 +20,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, HollowedsSwordsAndSorcery.MOD_ID);
 
-   // public static final RegistryObject<Item> TESTITEM = ITEMS.register("test_item",
-     //       () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> TESTMODELITEM = ITEMS.register("test_model_item",
-      //      () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> STAFF_OF_THUNDERING = ITEMS.register("staff_of_thundering",
             StaffOfThundering::new);
     public static final RegistryObject<Item> ETERNAL_GOLDEN_CARROT = ITEMS.register("eternal_golden_carrot",
@@ -186,7 +183,7 @@ public class ModItems {
          () -> new BlockingSword(ModTiers.ModWood, 6, -2.8f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DEATHS_SCYTHE = ITEMS.register("deaths_scythe",
-            () -> new DeathItem(ModTiers.Platinum, -4, -2.4f,
+            () -> new DeathItem(ModTiers.Platinum, -3, -2.4f,
                     new Item.Properties().rarity(Rarity.EPIC)));
   //  public static final RegistryObject<Item> WINGED_MEDALLION = ITEMS.register("winged_medallion",
     //        ParagliderItem::new);
