@@ -1,16 +1,8 @@
 package net.hollowed.hss.common.item;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
-import net.hollowed.hss.common.block.ModBlocks;
-import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.item.custom.*;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.client.model.ShieldModel;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
