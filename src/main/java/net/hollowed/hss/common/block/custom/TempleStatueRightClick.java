@@ -20,7 +20,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Map;
 
 public class TempleStatueRightClick {
-    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+    public static void execute(LevelAccessor world, int x, int y, int z, Entity entity) {
         if (entity == null)
             return;
         if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {

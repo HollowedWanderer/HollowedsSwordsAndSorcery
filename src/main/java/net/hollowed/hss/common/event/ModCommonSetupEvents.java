@@ -3,12 +3,9 @@ package net.hollowed.hss.common.event;
 import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.hollowed.hss.common.entity.custom.WroughtSentinelEntity;
-import net.hollowed.hss.common.entity.custom.WroughtSpearmanEntity;
-import net.hollowed.hss.common.entity.custom.WroughtSwordsmanEntity;
 import net.hollowed.hss.common.item.ModItems;
-import net.hollowed.hss.common.item.custom.ParagliderItem;
-import net.hollowed.hss.common.villager.ModVillagers;
+//import net.hollowed.hss.common.item.custom.ParagliderItem;
+//import net.hollowed.hss.common.villager.ModVillagers;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
@@ -27,10 +24,9 @@ public class ModCommonSetupEvents {
 	public static class ModEventBusEvents {
 		@SubscribeEvent
 		public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-			event.put(ModEntityTypes.WROUGHT_SPEARMAN.get(), WroughtSpearmanEntity.setAttributes());
-			event.put(ModEntityTypes.WROUGHT_SWORDSMAN.get(), WroughtSwordsmanEntity.setAttributes());
+
 			event.put(ModEntityTypes.DEEPSLATE_GOLEM.get(), DeepslateGolemEntity.setAttributes());
-			event.put(ModEntityTypes.WROUGHT_SENTINEL.get(), WroughtSentinelEntity.setAttributes());
+
 		}
 	}
 
@@ -38,27 +34,27 @@ public class ModCommonSetupEvents {
 
 		event.enqueueWork(() -> {
 
-			Sheets.addWoodType(ModWoodTypes.MAHOGANY);
-			Sheets.addWoodType(ModWoodTypes.CINNAMON);
+			//Sheets.addWoodType(ModWoodTypes.MAHOGANY);
+			//Sheets.addWoodType(ModWoodTypes.CINNAMON);
 
 		});
 	}
 
-	public static void addModItemProperties (FMLCommonSetupEvent event) {
-
-		event.enqueueWork(() -> {
-
-			@SuppressWarnings("deprecation") ItemPropertyFunction itemPropertyGetter =
-					(stack, world, entity, i) -> entity instanceof Player && ParagliderItem.isItemParagliding(stack) ? 1 : 0;
-
-			ItemProperties.register(ModItems.WINGED_MEDALLION.get(), new ResourceLocation("paragliding"), itemPropertyGetter);
-
-		});
-	}
+	//public static void addModItemProperties (FMLCommonSetupEvent event) {
+//
+//		event.enqueueWork(() -> {
+//
+//			@SuppressWarnings("deprecation") ItemPropertyFunction itemPropertyGetter =
+//					(stack, world, entity, i) -> entity instanceof Player && ParagliderItem.isItemParagliding(stack) ? 1 : 0;
+//
+//			ItemProperties.register(ModItems.WINGED_MEDALLION.get(), new ResourceLocation("paragliding"), itemPropertyGetter);
+//
+//		});
+//	}
 
 	public static void addModVillagerPOIS (FMLCommonSetupEvent event) {
 
-		event.enqueueWork(ModVillagers::registerPOIs);
+		//event.enqueueWork(ModVillagers::registerPOIs);
 
 	}
 

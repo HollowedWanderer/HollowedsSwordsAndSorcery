@@ -1,16 +1,14 @@
 package net.hollowed.hss.common.entity.client;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.hollowed.hss.common.entity.custom.WroughtSpearmanEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
+
 
 public class DeepslateGolemRenderer extends GeoEntityRenderer<DeepslateGolemEntity> {
     public DeepslateGolemRenderer(EntityRendererProvider.Context renderManager) {
@@ -24,11 +22,7 @@ public class DeepslateGolemRenderer extends GeoEntityRenderer<DeepslateGolemEnti
     }
 
     @Override
-    public RenderType getRenderType(DeepslateGolemEntity animatable, float partialTicks, PoseStack stack,
-                                    @Nullable MultiBufferSource renderTypeBuffer,
-                                    @Nullable VertexConsumer vertexBuilder, int packedLightIn,
-                                    ResourceLocation textureLocation) {
-        stack.scale(0.9f, 0.9f, 0.9f);
-        return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
+    public RenderType getRenderType(DeepslateGolemEntity animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
+        return super.getRenderType(animatable, texture, bufferSource, partialTick);
     }
 }

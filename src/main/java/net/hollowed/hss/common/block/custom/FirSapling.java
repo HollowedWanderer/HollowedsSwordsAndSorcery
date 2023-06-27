@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
+/**
 public class FirSapling extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE;
     protected static final float AABB_OFFSET = 6.0F;
@@ -66,3 +66,4 @@ public class FirSapling extends BushBlock implements BonemealableBlock {
         p_56001_.add(STAGE);
     }
 }
+**/

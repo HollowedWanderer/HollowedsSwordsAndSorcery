@@ -36,7 +36,7 @@ public class ModClientForgeEvents {
 //		}
 	}
 
-	@SubscribeEvent
+/*	@SubscribeEvent
 	public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
 		MahoganyLeaves.blockColorLoad(event);
 	}
@@ -45,4 +45,6 @@ public class ModClientForgeEvents {
 	public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
 		MahoganyLeaves.itemColorLoad(event);
 	}
+
+ */
 }

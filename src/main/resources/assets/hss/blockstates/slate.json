@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hss:block/slate",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hss:block/slate"
+    },
+    "axis=z": {
+      "model": "hss:block/slate",
+      "x": 90
+    }
+  }
+}

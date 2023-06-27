@@ -2,11 +2,10 @@ package net.hollowed.hss.common.entity.client;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.hollowed.hss.common.entity.custom.WroughtSpearmanEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class DeepslateGolemModel extends AnimatedGeoModel<DeepslateGolemEntity> {
+public class DeepslateGolemModel extends GeoModel<DeepslateGolemEntity> {
     @Override
     public ResourceLocation getModelResource(DeepslateGolemEntity object) {
         return new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, "geo/deepslate_golem.geo.json");

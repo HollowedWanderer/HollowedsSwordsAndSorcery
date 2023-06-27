@@ -1,9 +1,0 @@
-{
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "hss:item/glaive_item"
-	},
-	"display": {
-		"gui_light": "front"
-	}
-}

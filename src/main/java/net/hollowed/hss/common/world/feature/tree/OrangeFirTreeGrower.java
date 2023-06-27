@@ -10,7 +10,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlac
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 public class OrangeFirTreeGrower {
-    public static void execute(LevelAccessor world, double x, double y, double z) {
+    public static void execute(LevelAccessor world, int x, int y, int z) {
         if (world instanceof ServerLevel _serverworld) {
             StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("hss", "orange_fir_4"));
             if (template != null) {

@@ -13,7 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
 public class ExplosiveSackRightClick {
-    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+    public static void execute(LevelAccessor world, int x, int y, int z, Entity entity) {
         if (entity == null)
             return;
         if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.FLINT_AND_STEEL) {
@@ -21,7 +21,7 @@ public class ExplosiveSackRightClick {
             if (world instanceof ServerLevel _level)
                 _level.sendParticles(ParticleTypes.FLAME, x, y, z, 100, 0.5, 0.5, 0.5, 0.1);
             if (world instanceof Level _level && !_level.isClientSide())
-                _level.explode(null, x, y, z, 6, Explosion.BlockInteraction.BREAK);
+                _level.explode(null, x, y, z, 6, Level.ExplosionInteraction.TNT);
 
         }
     }

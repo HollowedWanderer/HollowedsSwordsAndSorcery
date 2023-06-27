@@ -40,7 +40,7 @@ public class StaffOfThundering extends SwordItem {
 
                 -4, -2.7999999999999998f,
 
-                new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB));
+                new Item.Properties().rarity(Rarity.RARE));
     }
 
     @Override

@@ -19,7 +19,10 @@ modId="hss" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="0.0.1-1.19-1.19.2" #mandatory
+
+loader="forge:separate-perspective"
+
+version="0.0.2-1.20.1" #mandatory
  # A display name for the mod
 displayName="Hollowed's Swords & Sorcery" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -29,7 +32,7 @@ displayName="Hollowed's Swords & Sorcery" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="holloweds_mods_icon.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for this example mod goes to Java" #optional
+credits="Some help from DancerVLT69" #optional
 # A text field displayed in the mod UI
 authors="HollowedWanderer" #optional
 # Display Test controls the display for your mod in the server connection screen
@@ -42,7 +45,7 @@ authors="HollowedWanderer" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This mod contains many fantasy thems of medieval times and all sorts of magic. It tries to expand the game in many aspects like combat, building, exploration, and more! The mod adds a complete magic system with many relics and artifacts for the player to craft or find. It's perfectly fine to put this mod in any modpack as long as credit is given.
+This mod contains many fantasy themes of medieval times and all sorts of magic. It tries to expand the game in many aspects like combat, building, exploration, and more! The mod adds a complete magic system with many relics and artifacts for the player to craft or find. It's perfectly fine to put this mod in any modpack as long as credit is given.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.hss]] #optional
@@ -61,6 +64,6 @@ This mod contains many fantasy thems of medieval times and all sorts of magic. I
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.19,1.20)"
+    versionRange="[1.19.3,1.21)"
     ordering="NONE"
     side="BOTH"

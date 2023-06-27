@@ -16,7 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 import static net.hollowed.hss.HollowedsSwordsAndSorcery.MOD_ID;
 
 
-public class ModVillagers {
+/**public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES =
             DeferredRegister.create(ForgeRegistries.POI_TYPES, MOD_ID);
 
@@ -46,3 +46,4 @@ public class ModVillagers {
         VILLAGER_PROFESSIONS.register(eventBus);
     }
 }
+**/

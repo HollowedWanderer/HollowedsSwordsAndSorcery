@@ -10,9 +10,9 @@ import net.minecraftforge.api.distmarker.Dist;
 public class ModParticles {
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event) {
-        event.register(ModParticleTypes.ELECTRIC_PULSE.get(), ElectricPulse::provider);
-        event.register(ModParticleTypes.ELECTRICAL_CRACKLE.get(), ElectricalCrackle::provider);
-        event.register(ModParticleTypes.FRICTION_SPARKS.get(), FrictionSparks::provider);
+        event.registerSpriteSet(ModParticleTypes.ELECTRIC_PULSE.get(), ElectricPulse::provider);
+        event.registerSpriteSet(ModParticleTypes.ELECTRICAL_CRACKLE.get(), ElectricalCrackle::provider);
+        event.registerSpriteSet(ModParticleTypes.FRICTION_SPARKS.get(), FrictionSparks::provider);
     }
 }
 

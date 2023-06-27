@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP ",
+    "PP ",
+    "PP "
+  ],
+
+  "key": {
+    "P": {
+      "item": "hss:mahogany_planks"
+    }
+  },
+
+  "result": {
+    "item": "hss:mahogany_door",
+    "count": 3
+  }
+}

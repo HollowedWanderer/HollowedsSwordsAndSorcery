@@ -20,8 +20,8 @@ import java.util.List;
 
 public class EternalGoldenCarrot extends Item {
     public EternalGoldenCarrot(Properties tab) {
-        super(new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB).stacksTo(1).rarity(Rarity.RARE)
-                .food((new FoodProperties.Builder()).nutrition(7).saturationMod(0f)
+        super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)
+                .food((new FoodProperties.Builder()).nutrition(7).saturationMod(14.4f)
 
                         .build()));
     }

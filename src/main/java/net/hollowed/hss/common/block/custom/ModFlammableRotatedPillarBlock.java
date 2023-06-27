@@ -38,7 +38,7 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
         return fireSpreadSpeed; // 5;
     }
 
-    @Override
+ /*   @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
             if(state.is(ModBlocks.MAHOGANY_LOG.get())) {
@@ -56,8 +56,8 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
                 return ModBlocks.STRIPPED_FIR_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
+*/
 
-
-        return super.getToolModifiedState(state, context, toolAction, simulate);
-    }
+   //     return super.getToolModifiedState(state, context, toolAction, simulate);
+    //}
 }

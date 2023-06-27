@@ -17,16 +17,16 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
-import top.theillusivec4.curios.api.type.capability.ICurioItem;
+//import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import javax.annotation.Nullable;
 import java.util.List;
-
+/*
 public class ParagliderItem extends Item implements DyeableLeatherItem, ICurioItem {
 
 
 	public ParagliderItem(){
-		super(new Properties().stacksTo(1).tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB));
+		super(new Properties().stacksTo(1));
 	}
 
 	@Override public int getMaxDamage(ItemStack stack){return (432);}
@@ -68,3 +68,4 @@ public class ParagliderItem extends Item implements DyeableLeatherItem, ICurioIt
 		else tag.remove("Paragliding");
 	}
 }
+**/

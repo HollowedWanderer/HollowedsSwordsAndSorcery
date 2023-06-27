@@ -1,15 +1,28 @@
 package net.hollowed.hss.common.item;
 
+import net.hollowed.hss.HollowedsSwordsAndSorcery;
+import net.hollowed.hss.common.block.ModBlocks;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import org.jetbrains.annotations.NotNull;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
+@Mod.EventBusSubscriber(modid = HollowedsSwordsAndSorcery.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTab {
-    public static final CreativeModeTab HOLLOWEDS_SWORDS_AND_SORCERY_TAB = new CreativeModeTab("holloweds_swords_and_sorcery_tab") {
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,
+            HollowedsSwordsAndSorcery.MOD_ID);
 
-        @Override
-        public @NotNull ItemStack makeIcon() {
-            return new ItemStack(ModItems.STEEL_INGOT.get());
-        }
-    };
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
+    }
+    public static RegistryObject<CreativeModeTab> EQUIPMENT_TAB = CREATIVE_MODE_TABS.register("equipment_tab", () ->
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_SWORD.get())).title(Component.literal("HSS - Equipment/Ingredients")).build());
+    public static RegistryObject<CreativeModeTab> SORCERY_TAB = CREATIVE_MODE_TABS.register("sorcery_tab", () ->
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STAFF_OF_THUNDERING.get())).title(Component.literal("HSS - Sorcery")).build());
+    public static RegistryObject<CreativeModeTab> BLOCKS_TAB = CREATIVE_MODE_TABS.register("blocks_tab", () ->
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SLATE.get())).title(Component.literal("HSS - Blocks")).build());
 }

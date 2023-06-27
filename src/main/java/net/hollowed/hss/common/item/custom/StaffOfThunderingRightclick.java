@@ -1,6 +1,7 @@
 package net.hollowed.hss.common.item.custom;
 
 import net.hollowed.hss.common.event.LightningMarkerEvent;
+import net.hollowed.hss.common.item.ModItems;
 import net.hollowed.hss.common.mana.PlayerManaProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSource;
@@ -12,9 +13,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
@@ -38,25 +41,33 @@ public class StaffOfThunderingRightclick {
 
         if (entity == null)
             return;
-        if (entity instanceof Player _player)
+/**        if (entity instanceof Player _player)
             _player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
                 mana.subMana(10);
                 _player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
                         .withStyle(ChatFormatting.AQUA));
-            });
+            }); **/
+        if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.STAFF_OF_THUNDERING.get()) {
+            if (entity instanceof LivingEntity _entity)
+                _entity.swing(InteractionHand.MAIN_HAND, true);
+        } else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == ModItems.STAFF_OF_THUNDERING.get()) {
+            if (entity instanceof LivingEntity _entity)
+                _entity.swing(InteractionHand.OFF_HAND, true);
+        }
+
         if (entity instanceof Player _player)
             _player.getCooldowns().addCooldown(itemstack.getItem(), 80);
         if (world instanceof ServerLevel _level)
             _level.getServer().getCommands().performPrefixedCommand(
                     new CommandSourceStack(CommandSource.NULL, new Vec3(
-                            (entity.level.clip(new ClipContext(
+                            (entity.level().clip(new ClipContext(
                                     entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(20)),
                                     ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-                            (entity.level.clip(
+                            (entity.level().clip(
                                             new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(20)),
                                                     ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
                                     .getBlockPos().getY()),
-                            (entity.level.clip(
+                            (entity.level().clip(
                                             new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(20)),
                                                     ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
                                     .getBlockPos().getZ())),

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": {
+      "item": "hss:mahogany_planks"
+  },
+
+  "result": {
+    "item": "hss:mahogany_button",
+    "count": 1
+  }
+}

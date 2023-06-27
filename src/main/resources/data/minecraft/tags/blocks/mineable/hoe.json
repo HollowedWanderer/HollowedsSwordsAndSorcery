@@ -1,13 +1,5 @@
 {
   "replace": false,
   "values": [
-    "hss:gunpowder_sack",
-    "hss:sugar_sack",
-    "hss:sweet_berry_sack",
-    "hss:cocoa_bean_sack",
-    "hss:sugar_cane_bundle",
-    "hss:string_spool",
-    "hss:glow_berry_sack",
-    "hss:mahogany_leaves"
   ]
 }

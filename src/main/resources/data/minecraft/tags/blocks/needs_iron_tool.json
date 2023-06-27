@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "hss:steel_block"
+    "hss:steel_block",
+    "hss:mythril_block",
+    "hss:silver_block",
+    "hss:infernium_block",
+    "hss:zephyrite_block"
   ]
 }

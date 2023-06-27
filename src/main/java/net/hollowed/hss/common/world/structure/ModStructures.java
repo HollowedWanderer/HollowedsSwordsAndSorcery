@@ -1,6 +1,7 @@
 package net.hollowed.hss.common.world.structure;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,7 +16,7 @@ public class ModStructures {
      * This will handle registering the base structure for us at the correct time, so we don't have to handle it ourselves.
      */
     public static final DeferredRegister<StructureType<?>> DEFERRED_REGISTRY_STRUCTURE =
-            DeferredRegister.create(Registry.STRUCTURE_TYPE_REGISTRY, MOD_ID);
+            DeferredRegister.create(Registries.STRUCTURE_TYPE, MOD_ID);
 
     /**
      * Registers the base structure itself and sets what its path is. In this case,

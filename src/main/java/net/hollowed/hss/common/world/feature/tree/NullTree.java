@@ -6,10 +6,10 @@ import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.NotNull;
 
-public class NullTree extends AbstractTreeGrower {
+//public class NullTree extends AbstractTreeGrower {
 
-    @Override
-    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource p_222910_, boolean p_222911_) {
-        return null;
-    }
-}
+   // @Override
+ //   protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource p_222910_, boolean p_222911_) {
+  //      return null;
+ //   }
+//}

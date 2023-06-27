@@ -13,9 +13,10 @@ plugins {
 
     id 'maven-publish'
     id 'eclipse'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '0.0.1-1.19.2'
+version = '0.0.2-1.20.1'
 group = 'net.hollowed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
 java {
@@ -43,7 +44,7 @@ minecraft {
     // Simply re-run your setup task after changing the mappings to update your workspace.
 
     // mappings channel: 'official', version: '1.19.2'
-    mappings channel: 'parchment', version: '2022.11.27-1.19.2'
+    mappings channel: 'official', version: '1.20'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -154,14 +155,14 @@ repositories {
 
     // GeckoLibs
     maven { name = "Gecko Libs 3";      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-    maven { url = "https://maven.theillusivec4.top/" }
+    //maven { url = "https://maven.theillusivec4.top/" }
 }
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.4'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.0.1'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -175,9 +176,9 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5")
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5:api")
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.14')
+    //runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5")
+    //compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5:api")
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20:4.2')
 
     // implementation fg.deobf('maven.modrinth:better-combat:1.5.3+1.19-forge')
     // implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.1+1.19.3")

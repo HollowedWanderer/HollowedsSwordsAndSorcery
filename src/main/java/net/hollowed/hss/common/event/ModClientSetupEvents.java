@@ -1,14 +1,8 @@
 package net.hollowed.hss.common.event;
 
-import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
-import net.hollowed.hss.common.entity.client.WroughtSentinelRenderer;
-import net.hollowed.hss.common.entity.client.WroughtSpearmanRenderer;
-import net.hollowed.hss.common.entity.client.WroughtSwordsmanRenderer;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,22 +17,20 @@ import static net.hollowed.hss.HollowedsSwordsAndSorcery.MOD_ID;
 public class ModClientSetupEvents {
 
 	public static void modRenderTypes() {
-		EntityRenderers.register(ModEntityTypes.WROUGHT_SPEARMAN.get(), WroughtSpearmanRenderer::new);
-		EntityRenderers.register(ModEntityTypes.WROUGHT_SWORDSMAN.get(), WroughtSwordsmanRenderer::new);
+
 		EntityRenderers.register(ModEntityTypes.DEEPSLATE_GOLEM.get(), DeepslateGolemRenderer::new);
-		EntityRenderers.register(ModEntityTypes.WROUGHT_SENTINEL.get(), WroughtSentinelRenderer::new);
-		EntityRenderers.register(ModEntityTypes.SHOCKWAVE.get(), WroughtSentinelRenderer::new);
+
 
 		// ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPLE_STATUE.get(), RenderType.cutout());
 		// ItemBlockRenderTypes.setRenderLayer(ModBlocks.CATTAIL.get(), renderType -> renderType == RenderType.cutout());
 
-		BlockEntityRenderers.register(ModBlockEntities.MOD_SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+		//BlockEntityRenderers.register(ModBlockEntities.MOD_SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
 	}
 
 	public static void modWoodTypes() {
 
-		WoodType.register(ModWoodTypes.CINNAMON);
-		WoodType.register(ModWoodTypes.MAHOGANY);
+		//WoodType.register(ModWoodTypes.CINNAMON);
+		//WoodType.register(ModWoodTypes.MAHOGANY);
 
 	}
 

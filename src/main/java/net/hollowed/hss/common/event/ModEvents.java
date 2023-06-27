@@ -5,7 +5,7 @@ import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.item.ModItems;
 import net.hollowed.hss.common.mana.PlayerMana;
 import net.hollowed.hss.common.mana.PlayerManaProvider;
-import net.hollowed.hss.common.villager.ModVillagers;
+//import net.hollowed.hss.common.villager.ModVillagers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -33,15 +33,15 @@ public class ModEvents {
     public static class ForgeEvents {
         @SubscribeEvent
         public static void addCustomTrades(VillagerTradesEvent event) {
-            if(event.getType() == ModVillagers.SPELUNKER.get()) {
-                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-                ItemStack stack = new ItemStack(ModItems.STEEL_INGOT.get(), 1);
-                int villagerLevel = 1;
+            //if(event.getType() == ModVillagers.SPELUNKER.get()) {
+              //  Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+              //  ItemStack stack = new ItemStack(ModItems.STEEL_INGOT.get(), 1);
+              //  int villagerLevel = 1;
 
-                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 5),
-                        stack,10,8,0.02F));
-            }
+              //  trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                //        new ItemStack(Items.EMERALD, 5),
+                  //      stack,10,8,0.02F));
+            //}
         }
     }
 
@@ -75,7 +75,7 @@ public class ModEvents {
         if(event.side == LogicalSide.SERVER) {
             event.player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
                 if(mana.getMana() > 0) {
-                    long worldTime = event.player.level.getGameTime();
+                    long worldTime = event.player.level().getGameTime();
                     if(worldTime % 20 == 0) { // Once Every Second
                         mana.subMana(1);
                         event.player.sendSystemMessage(Component.literal("Added Mana"));

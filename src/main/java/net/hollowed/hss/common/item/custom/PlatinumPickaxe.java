@@ -35,7 +35,7 @@ public class PlatinumPickaxe extends PickaxeItem {
             public Ingredient getRepairIngredient() {
                 return Ingredient.of(new ItemStack(ModItems.PLATINUM.get()));
             }
-        }, 1, -2.7999999999999998f, new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB));
+        }, 1, -2.7999999999999998f, new Item.Properties());
     }
 }
 
