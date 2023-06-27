@@ -186,7 +186,7 @@ public class ModItems {
          () -> new BlockingSword(ModTiers.ModWood, 6, -2.8f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DEATHS_SCYTHE = ITEMS.register("deaths_scythe",
-            () -> new DeathItem(ModTiers.Platinum, -4, -2.4f,
+            () -> new DeathItem(ModTiers.Platinum, -3, -2.4f,
                     new Item.Properties().rarity(Rarity.EPIC)));
   //  public static final RegistryObject<Item> WINGED_MEDALLION = ITEMS.register("winged_medallion",
     //        ParagliderItem::new);

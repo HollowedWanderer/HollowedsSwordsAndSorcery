@@ -54,7 +54,5 @@ public class StaffOfThundering extends SwordItem {
         StaffOfThunderingRightclick.execute(world, entity, itemstack);
         return ar;
     }
-
-
 }
 

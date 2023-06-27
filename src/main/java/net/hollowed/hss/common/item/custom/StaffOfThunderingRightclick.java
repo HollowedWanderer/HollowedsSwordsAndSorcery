@@ -47,6 +47,8 @@ public class StaffOfThunderingRightclick {
                 _player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
                         .withStyle(ChatFormatting.AQUA));
             }); **/
+
+
         if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.STAFF_OF_THUNDERING.get()) {
             if (entity instanceof LivingEntity _entity)
                 _entity.swing(InteractionHand.MAIN_HAND, true);
@@ -54,6 +56,7 @@ public class StaffOfThunderingRightclick {
             if (entity instanceof LivingEntity _entity)
                 _entity.swing(InteractionHand.OFF_HAND, true);
         }
+
 
         if (entity instanceof Player _player)
             _player.getCooldowns().addCooldown(itemstack.getItem(), 80);
