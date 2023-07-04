@@ -31,25 +31,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> MYTHRIL_INGOT = ITEMS.register("mythril_ingot",
             () -> new Item(new Item.Properties().stacksTo(64)));
-
-    //Wrought/Aetherium Items
-
-    //public static final RegistryObject<Item> AETHERIUM_INGOT = ITEMS.register("aetherium_ingot",
-      //      () -> new Item(new Item.Properties().stacksTo(64)));
-
-    //public static final RegistryObject<Item> INFINITY_DUST = ITEMS.register("infinity_dust",
-         //   () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> ENDER_DUST = ITEMS.register("ender_dust",
             () -> new Item(new Item.Properties().stacksTo(64)
                     ));
-  //  public static final RegistryObject<Item> MAHOGANY_SIGN = ITEMS.register("mahogany_sign",
-    //        () -> new SignItem(new Item.Properties().stacksTo(16),
-      //              ModBlocks.MAHOGANY_SIGN.get(), ModBlocks.MAHOGANY_WALL_SIGN.get()));
 
-    //public static final RegistryObject<Item> CINNAMON_SIGN = ITEMS.register("cinnamon_sign",
-      //      () -> new SignItem(new Item.Properties().stacksTo(16)
-        //            ,
-          //          ModBlocks.CINNAMON_SIGN.get(), ModBlocks.CINNAMON_WALL_SIGN.get()));
+
     public static final RegistryObject<Item> SILVER_PLATED_CROSSBOW = ITEMS.register("silver_plated_crossbow",
             () -> new SpeedCrossbowItem(
                     new Item.Properties()));
@@ -84,7 +70,7 @@ public class ModItems {
             () -> new SteelArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> STEEL_GREATSWORD = ITEMS.register("steel_greatsword",
-            () -> new BlockingSword(ModTiers.Steel, 5, -2.9f,
+            () -> new BlockingSword(ModTiers.Steel, 4, -2.9f,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive",
             () -> new HeavySwordItem(ModTiers.Steel, 1, -2.4f,
@@ -122,9 +108,6 @@ public class ModItems {
     public static final RegistryObject<Item> PLATINUM_GLAIVE = ITEMS.register("platinum_glaive",
             () -> new HeavySwordItem(ModTiers.Platinum, 3, -2.3f,
                     new Item.Properties()));
- public static final RegistryObject<Item> PLATINUM_DAGGER = ITEMS.register("platinum_dagger",
-         () -> new DaggerItem(ModTiers.Platinum, 1, -1.4f,
-                 new Item.Properties()));
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.HELMET,
                     new Item.Properties()));
@@ -138,7 +121,7 @@ public class ModItems {
             () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
     public static final RegistryObject<Item> GREAT_HAMMER = ITEMS.register("great_hammer",
-            () -> new SwordItem(ModTiers.ModStone, 5, -3.2f,
+            () -> new HammerItem(ModTiers.ModStone, 5, -3.2f,
                     new Item.Properties()));
     public static final RegistryObject<Item> BATTLESTAFF = ITEMS.register("battlestaff",
             () -> new SwordItem(ModTiers.ModWood, 1, -2.2f,
@@ -147,53 +130,47 @@ public class ModItems {
             () -> new SwordItem(ModTiers.ModStone, -1, -1.6f,
                     new Item.Properties()));
  public static final RegistryObject<Item> WOODEN_GLAIVE = ITEMS.register("wooden_glaive",
-         () -> new HeavySwordItem(ModTiers.ModWood, 1, -2.4f,
+         () -> new HeavySwordItem(ModTiers.ModWood, -1, -2.4f,
                  new Item.Properties()));
  public static final RegistryObject<Item> STONE_GLAIVE = ITEMS.register("stone_glaive",
-         () -> new HeavySwordItem(ModTiers.ModStone, 1, -2.4f,
+         () -> new HeavySwordItem(ModTiers.ModStone, 0, -2.4f,
                  new Item.Properties()));
     public static final RegistryObject<Item> IRON_GLAIVE = ITEMS.register("iron_glaive",
-            () -> new HeavySwordItem(ModTiers.Steel, 1, -2.4f,
+            () -> new HeavySwordItem(ModTiers.ModIron, 1, -2.4f,
                     new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive",
-         () -> new HeavySwordItem(ModTiers.Steel, 1, -2.4f,
+         () -> new HeavySwordItem(ModTiers.ModGold, 1, -2.4f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive",
-            () -> new HeavySwordItem(ModTiers.Steel, 2, -2.3f,
+            () -> new HeavySwordItem(ModTiers.ModDiamond, 2, -2.3f,
                     new Item.Properties()));
     public static final RegistryObject<Item> NETHERITE_GLAIVE = ITEMS.register("netherite_glaive",
-            () -> new HeavySwordItem(ModTiers.Steel, 3, -2.3f,
+            () -> new HeavySwordItem(ModTiers.ModNetherite, 3, -2.3f,
                     new Item.Properties().fireResistant()));
  public static final RegistryObject<Item> WOODEN_GREATSWORD = ITEMS.register("wooden_greatsword",
          () -> new BlockingSword(ModTiers.ModWood, 2, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> STONE_GREATSWORD = ITEMS.register("stone_greatsword",
-         () -> new BlockingSword(ModTiers.ModWood, 3, -2.8f,
+         () -> new BlockingSword(ModTiers.ModStone, 3, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> IRON_GREATSWORD = ITEMS.register("iron_greatsword",
-         () -> new BlockingSword(ModTiers.ModWood, 4, -2.8f,
+         () -> new BlockingSword(ModTiers.ModIron, 4, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GREATSWORD = ITEMS.register("golden_greatsword",
-         () -> new BlockingSword(ModTiers.ModWood, 2, -2.8f,
+         () -> new BlockingSword(ModTiers.ModGold, 2, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> DIAMOND_GREATSWORD = ITEMS.register("diamond_greatsword",
-         () -> new BlockingSword(ModTiers.ModWood, 5, -2.8f,
+         () -> new BlockingSword(ModTiers.ModDiamond, 5, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> NETHERITE_GREATSWORD = ITEMS.register("netherite_greatsword",
-         () -> new BlockingSword(ModTiers.ModWood, 6, -2.8f,
+         () -> new BlockingSword(ModTiers.ModNetherite, 6, -2.8f,
                  new Item.Properties()));
+    public static final RegistryObject<Item> VANGUARD_SHIELD = ITEMS.register("vanguard_shield",
+            () -> new VanguardShield(
+                    new Item.Properties().rarity(Rarity.UNCOMMON).durability(447)));
     public static final RegistryObject<Item> DEATHS_SCYTHE = ITEMS.register("deaths_scythe",
             () -> new DeathItem(ModTiers.Platinum, -3, -2.4f,
                     new Item.Properties().rarity(Rarity.EPIC)));
-  //  public static final RegistryObject<Item> WINGED_MEDALLION = ITEMS.register("winged_medallion",
-    //        ParagliderItem::new);
-   // public static final RegistryObject<Item> WROUGHT_SPEARMAN_SPAWN_EGG = ITEMS.register("wrought_spearman_spawn_egg",
-     //       () -> new ForgeSpawnEggItem(ModEntityTypes.WROUGHT_SPEARMAN, 0x7e8986, 0x007662,
-       //             new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB)));
-    //public static final RegistryObject<Item> WROUGHT_SWORDSMAN_SPAWN_EGG = ITEMS.register("wrought_swordsman_spawn_egg",
-      //      () -> new ForgeSpawnEggItem(ModEntityTypes.WROUGHT_SWORDSMAN, 0x7e8986, 0x007662,
-        //            new Item.Properties().tab(ModCreativeModeTab.HOLLOWEDS_SWORDS_AND_SORCERY_TAB)));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

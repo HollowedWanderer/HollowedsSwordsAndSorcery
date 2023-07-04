@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.hollowed.hss.common.block.ModBlocks;
 import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.client.particle.ModParticleTypes;
-import net.hollowed.hss.common.client.particle.ModParticles;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.event.ModClientSetupEvents;
 import net.hollowed.hss.common.event.ModCommonSetupEvents;
@@ -12,22 +11,18 @@ import net.hollowed.hss.common.item.ModCreativeModeTab;
 import net.hollowed.hss.common.item.ModItems;
 
 //import net.hollowed.hss.common.villager.ModVillagers;
-import net.hollowed.hss.common.world.feature.ModConfiguredFeatures;
-import net.hollowed.hss.common.world.feature.ModPlacedFeatures;
+import net.hollowed.hss.common.enchantment.ModEnchantments;
 import net.hollowed.hss.common.world.structure.ModStructures;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
@@ -85,6 +80,7 @@ public class HollowedsSwordsAndSorcery {
         ModCreativeModeTab.register(modEventBus);
 
 
+        ModEnchantments.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
@@ -162,12 +158,27 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModItems.SILVER_PLATED_LEGGINGS);
             event.accept(ModItems.SILVER_TIPPED_BOOTS);
             event.accept(ModItems.SILVER_PLATED_CROSSBOW);
+            event.accept(ModItems.WOODEN_GLAIVE);
+            event.accept(ModItems.STONE_GLAIVE);
+            event.accept(ModItems.IRON_GLAIVE);
+            event.accept(ModItems.GOLDEN_GLAIVE);
+            event.accept(ModItems.DIAMOND_GLAIVE);
+            event.accept(ModItems.NETHERITE_GLAIVE);
+            event.accept(ModItems.WOODEN_GREATSWORD);
+            event.accept(ModItems.STONE_GREATSWORD);
+            event.accept(ModItems.IRON_GREATSWORD);
+            event.accept(ModItems.GOLDEN_GREATSWORD);
+            event.accept(ModItems.DIAMOND_GREATSWORD);
+            event.accept(ModItems.NETHERITE_GREATSWORD);
+            event.accept(ModItems.VANGUARD_SHIELD);
         }
         if(event.getTab() == ModCreativeModeTab.SORCERY_TAB.get()) {
             event.accept(ModItems.ETERNAL_GOLDEN_CARROT);
             event.accept(ModItems.STAFF_OF_THUNDERING);
         }
         if(event.getTab() == ModCreativeModeTab.BLOCKS_TAB.get()) {
+            event.accept(ModBlocks.PLATINUM_ORE);
+            event.accept(ModBlocks.DEEPSLATE_PLATINUM_ORE);
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.INFERNIUM_BLOCK);
             event.accept(ModBlocks.ZEPHYRITE_BLOCK);

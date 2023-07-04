@@ -38,11 +38,11 @@ public class HeavySwordItem extends SwordItem {
     public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(itemstack, world, entity, slot, selected);
         if (selected)
-            TwoHandWeaponHand.execute(entity);
+            GlaiveHand.execute(entity);
     }
 
     @Override
     public void appendHoverText(ItemStack p_41421_, @Nullable Level level, List<Component> components, TooltipFlag tooltipFlag) {
-        components.add(Component.literal("Two Handed").withStyle(ChatFormatting.GOLD));
+        components.add(Component.literal("Two Handed - Vanguard Shield Usable").withStyle(ChatFormatting.GOLD));
     }
 }

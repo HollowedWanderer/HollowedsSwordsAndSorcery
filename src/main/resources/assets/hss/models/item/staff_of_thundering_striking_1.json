@@ -1,0 +1,18 @@
+{
+	"loader": "forge:separate_transforms",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/staff_of_thundering_striking_hand_1"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/staff_of_thundering_striking_inventory_1"
+		},
+		"fixed": {
+			"parent": "hss:item/staff_of_thundering_striking_inventory_1"
+		},
+		"ground": {
+			"parent": "hss:item/staff_of_thundering_striking_inventory_1"
+		}
+	}
+}

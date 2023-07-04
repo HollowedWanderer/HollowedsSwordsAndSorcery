@@ -13,7 +13,10 @@ public class TwoHandWeaponHand {
             return;
         if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
             if (entity instanceof LivingEntity _entity)
-                _entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 1, 2, (false), (false)));
+                if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+                    _entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 1, 2, (false), (false)));
+                }
+
         }
     }
 }

@@ -13,6 +13,7 @@ public class ModParticles {
         event.registerSpriteSet(ModParticleTypes.ELECTRIC_PULSE.get(), ElectricPulse::provider);
         event.registerSpriteSet(ModParticleTypes.ELECTRICAL_CRACKLE.get(), ElectricalCrackle::provider);
         event.registerSpriteSet(ModParticleTypes.FRICTION_SPARKS.get(), FrictionSparks::provider);
+        event.registerSpriteSet(ModParticleTypes.DEATH_SWEEP.get(), DeathSweep::provider);
     }
 }
 

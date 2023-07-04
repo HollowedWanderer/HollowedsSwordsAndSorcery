@@ -4,6 +4,7 @@ import net.hollowed.hss.common.event.LightningMarkerEvent;
 import net.hollowed.hss.common.item.ModItems;
 import net.hollowed.hss.common.mana.PlayerManaProvider;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.telemetry.TelemetryProperty;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
@@ -32,11 +33,17 @@ import java.util.Random;
 public class StaffOfThunderingRightclick {
     public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
         {
-            ItemStack _ist = itemstack;
-            if (_ist.hurt(1, RandomSource.create(), null)) {
-                _ist.shrink(1);
-                _ist.setDamageValue(0);
+            if (entity instanceof Player _player) {
+                if (!_player.isCreative()) {
+                    ItemStack _ist = itemstack;
+                    if (_ist.hurt(1, RandomSource.create(), null)) {
+                        _ist.shrink(1);
+                        _ist.setDamageValue(0);
+                    }
+                }
+
             }
+
         }
 
         if (entity == null)
