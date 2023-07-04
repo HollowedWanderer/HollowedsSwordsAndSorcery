@@ -21,6 +21,20 @@
 				"hss:striking": 1
 			},
 			"model": "hss:item/staff_of_thundering_striking"
+		},
+		{
+			"predicate": {
+				"hss:striking": 1,
+				"hss:charge": 0.58
+			},
+			"model": "hss:item/staff_of_thundering_striking_1"
+		},
+		{
+			"predicate": {
+				"hss:striking": 1,
+				"hss:charge": 1.0
+			},
+			"model": "hss:item/staff_of_thundering_striking_2"
 		}
 	]
 }

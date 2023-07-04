@@ -97,7 +97,7 @@
 
 
 
-
+  "item.hss.vanguard_shield": "Vanguard Shield",
   "item.hss.staff_of_thundering": "Stormcaller's Staff",
   "item.hss.eternal_golden_carrot": "Eternal Golden Carrot",
   "item.hss.steel_ingot": "Steel Ingot",
@@ -127,7 +127,19 @@
 
   "item.hss.mythril_ingot": "Mythril Ingot",
 
+  "item.hss.wooden_glaive": "Wooden Glaive",
+  "item.hss.stone_glaive": "Stone Glaive",
   "item.hss.iron_glaive": "Iron Glaive",
+  "item.hss.golden_glaive": "Golden Glaive",
+  "item.hss.diamond_glaive": "Diamond Glaive",
+  "item.hss.netherite_glaive": "Netherite Glaive",
+  "item.hss.wooden_greatsword": "Wooden Greatsword",
+  "item.hss.stone_greatsword": "Stone Greatsword",
+  "item.hss.iron_greatsword": "Iron Greatsword",
+  "item.hss.golden_greatsword": "Golden Greatsword",
+  "item.hss.diamond_greatsword": "Diamond Greatsword",
+  "item.hss.netherite_greatsword": "Netherite Greatsword",
+
 
   "item.hss.deaths_scythe": "Death's Scythe",
 
