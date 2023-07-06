@@ -1,6 +1,8 @@
 package net.hollowed.hss.common.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.hollowed.hss.common.effect.ModEffects;
+import net.hollowed.hss.common.item.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -15,8 +17,8 @@ import java.util.Map;
 public class ModArmorItems extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ArmorMaterials.NETHERITE,
-                            new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0)).build();
+                    .put(ModArmorMaterials.SILVER,
+                            new MobEffectInstance(ModEffects.SILVER_SHIELD.get(), 10, 0)).build();
 
     public ModArmorItems(ArmorMaterial material, Type slot, Properties settings) {
         super(material, slot, settings);

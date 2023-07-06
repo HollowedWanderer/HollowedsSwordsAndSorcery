@@ -2,8 +2,8 @@ package net.hollowed.hss;
 
 import com.mojang.logging.LogUtils;
 import net.hollowed.hss.common.block.ModBlocks;
-import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.client.particle.ModParticleTypes;
+import net.hollowed.hss.common.effect.ModEffects;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.event.ModClientSetupEvents;
 import net.hollowed.hss.common.event.ModCommonSetupEvents;
@@ -80,10 +80,10 @@ public class HollowedsSwordsAndSorcery {
         ModCreativeModeTab.register(modEventBus);
 
 
+        ModEffects.register(modEventBus);
         ModEnchantments.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
         ModEntityTypes.register(modEventBus);
        // ModVillagers.register(modEventBus);
 

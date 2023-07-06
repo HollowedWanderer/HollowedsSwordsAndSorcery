@@ -101,16 +101,16 @@ public class ModItems {
             () -> new HeavySwordItem(ModTiers.Platinum, 3, -2.3f,
                     new Item.Properties()));
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
-            () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.HELMET,
+            () -> new SilverArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.HELMET,
                     new Item.Properties()));
     public static final RegistryObject<Item> SILVER_PLATED_CHESTPIECE = ITEMS.register("silver_plated_chestpiece",
-            () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.CHESTPLATE,
+            () -> new SilverArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
     public static final RegistryObject<Item> SILVER_PLATED_LEGGINGS = ITEMS.register("silver_plated_leggings",
-            () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.LEGGINGS,
+            () -> new SilverArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
     public static final RegistryObject<Item> SILVER_TIPPED_BOOTS = ITEMS.register("silver_tipped_boots",
-            () -> new SilverArmorItem(ModArmorMaterials.PLATINUM, ArmorItem.Type.BOOTS,
+            () -> new SilverArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
     public static final RegistryObject<Item> GREAT_HAMMER = ITEMS.register("great_hammer",
             () -> new HammerItem(ModTiers.ModStone, 5, -3.2f,

@@ -2,10 +2,7 @@ package net.hollowed.hss.common.block;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.block.custom.*;
-import net.hollowed.hss.common.block.custom.util.FlammableLeavesBlock;
-import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.item.ModItems;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;

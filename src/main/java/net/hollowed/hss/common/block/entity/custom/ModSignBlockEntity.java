@@ -1,6 +1,5 @@
 package net.hollowed.hss.common.block.entity.custom;
 
-import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;

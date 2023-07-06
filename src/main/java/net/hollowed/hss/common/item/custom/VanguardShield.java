@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class VanguardShield extends ShieldItem implements Equipable {
-    public static final int EFFECTIVE_BLOCK_DELAY = 10;
+    public static final int EFFECTIVE_BLOCK_DELAY = 5;
     public static final float MINIMUM_DURABILITY_DAMAGE = 3.0F;
     public static final String TAG_BASE_COLOR = "Base";
 

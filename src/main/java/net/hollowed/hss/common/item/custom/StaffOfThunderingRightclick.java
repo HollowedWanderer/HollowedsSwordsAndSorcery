@@ -82,7 +82,7 @@ public class StaffOfThunderingRightclick {
                                                     ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
                                     .getBlockPos().getZ())),
                             Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-                    "summon minecraft:marker ~ ~ ~ {Tags:[\"lightning\"]}");
+                    "summon minecraft:marker ~ ~1 ~ {Tags:[\"lightning\"]}");
         LightningMarkerEvent.execute(world, entity);
     }
 }
