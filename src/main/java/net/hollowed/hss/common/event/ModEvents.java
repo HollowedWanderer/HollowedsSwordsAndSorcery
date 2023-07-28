@@ -2,6 +2,9 @@ package net.hollowed.hss.common.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
+import net.hollowed.hss.common.entity.ModEntityTypes;
+import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
+import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.hollowed.hss.common.item.ModItems;
 import net.hollowed.hss.common.mana.PlayerMana;
 import net.hollowed.hss.common.mana.PlayerManaProvider;
@@ -17,6 +20,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -82,6 +86,12 @@ public class ModEvents {
                     }
                 }
             });
+        }
+    }
+    @Mod.EventBusSubscriber(modid = HollowedsSwordsAndSorcery.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ModEventBusEvents {
+        @SubscribeEvent
+        public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         }
     }
 

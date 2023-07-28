@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hss:block/ancient_clay_slab"
+    },
+    "type=double": {
+      "model": "hss:block/ancient_clay"
+    },
+    "type=top": {
+      "model": "hss:block/ancient_clay_slab_top"
+    }
+  }
+}

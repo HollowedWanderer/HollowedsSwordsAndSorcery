@@ -1,0 +1,7 @@
+
+{
+  "parent": "hss:display/dungeon_door_open.item",
+  "textures": {
+    "particle": "hss:item/dungeon_door_item"
+  }
+}

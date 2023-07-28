@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wooden_shovel"
+    },
+    {
+      "item": "hss:blank_clay_tablet"
+    }
+  ],
+  "result": {
+    "item": "hss:shovel_mold",
+    "count": 1
+  }
+}

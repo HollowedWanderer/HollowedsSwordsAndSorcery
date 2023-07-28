@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "00 ",
+    "00 ",
+    "   "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "hss:gold_chunk",
+    "count": 1
+  }
+}

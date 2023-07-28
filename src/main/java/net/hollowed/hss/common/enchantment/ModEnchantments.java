@@ -20,6 +20,9 @@ public class ModEnchantments {
      //               () -> new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON,
        //                     EquipmentSlot.MAINHAND));
 
+    public static RegistryObject<Enchantment> CURSE_OF_SHATTERING =
+            ENCHANTMENTS.register("curse_of_shattering",
+                    () -> new CurseOfShattering(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.values()));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

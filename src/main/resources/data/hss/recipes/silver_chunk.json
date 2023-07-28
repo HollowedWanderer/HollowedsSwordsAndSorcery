@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "00 ",
+    "00 ",
+    "   "
+  ],
+  "key": {
+    "0": {
+      "item": "hss:silver_scrap"
+    }
+  },
+  "result": {
+    "item": "hss:silver_chunk",
+    "count": 1
+  }
+}

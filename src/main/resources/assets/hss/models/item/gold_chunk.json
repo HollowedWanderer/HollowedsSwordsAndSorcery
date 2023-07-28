@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "hss:item/gold_chunk"
+	},
+	"display": {
+		"gui_light": "front"
+	}
+}

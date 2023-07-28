@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hss:block/ancient_clay_bricks",
+    "side": "hss:block/ancient_clay_bricks",
+    "top": "hss:block/ancient_clay_bricks"
+  }
+}

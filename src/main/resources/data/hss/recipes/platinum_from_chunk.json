@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hss:platinum_chunk"
+    }
+  ],
+  "result": {
+    "item": "hss:platinum",
+    "count": 4
+  }
+}

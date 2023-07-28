@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "00 ",
+    "00 ",
+    "   "
+  ],
+  "key": {
+    "0": {
+      "item": "hss:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "hss:steel_chunk",
+    "count": 1
+  }
+}

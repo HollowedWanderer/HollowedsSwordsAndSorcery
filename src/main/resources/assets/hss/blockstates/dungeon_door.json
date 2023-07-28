@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hss:custom/dungeon_door_particle"
+    },
+    "facing=east": {
+      "model": "hss:custom/dungeon_door_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "hss:custom/dungeon_door_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:custom/dungeon_door_particle",
+      "y": 270
+    }
+  }
+}

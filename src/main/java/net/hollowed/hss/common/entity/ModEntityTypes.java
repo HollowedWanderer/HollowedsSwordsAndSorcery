@@ -1,31 +1,41 @@
 package net.hollowed.hss.common.entity;
 
-import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.hollowed.hss.HollowedsSwordsAndSorcery;
+import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 
-import java.util.function.Supplier;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 
-import static net.hollowed.hss.HollowedsSwordsAndSorcery.MOD_ID;
-
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEntityTypes {
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MOD_ID);
+    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, HollowedsSwordsAndSorcery.MOD_ID);
+    public static final RegistryObject<EntityType<IceologerEntity>> ICEOLOGER = register("iceologer",
+            EntityType.Builder.<IceologerEntity>of(IceologerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IceologerEntity::new)
 
+                    .sized(0.6f, 1.8f));
 
-    public static final RegistryObject<EntityType<DeepslateGolemEntity>> DEEPSLATE_GOLEM =
-            ENTITY_TYPES.register("deepslate_golem",
-                    () -> EntityType.Builder.of(DeepslateGolemEntity::new, MobCategory.MONSTER)
-                            .sized(0.8f, 0.8f)
-                            .build(new ResourceLocation(MOD_ID, "deepslate_golem").toString()));
+    private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+        return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+    }
 
+    @SubscribeEvent
+    public static void init(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            IceologerEntity.init();
+        });
+    }
 
-    public static void register(IEventBus eventBus) {
-        ENTITY_TYPES.register(eventBus);
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(ICEOLOGER.get(), IceologerEntity.createAttributes().build());
     }
 }
+

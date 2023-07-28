@@ -68,7 +68,7 @@ public class SilverArmorItem extends ArmorItem implements GeoItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.SILVER,
-                            new MobEffectInstance(ModEffects.SILVER_SHIELD.get(), 10, 0)).build();
+                            new MobEffectInstance(new MobEffectInstance(ModEffects.SILVER_SHIELD.get(), 10, 0, false, false))).build();
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {

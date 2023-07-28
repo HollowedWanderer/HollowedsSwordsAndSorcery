@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "hss:coal_dust"
+    }
+  ],
+  "output": {
+    "item": "hss:steel_ingot",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

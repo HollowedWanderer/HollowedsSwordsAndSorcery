@@ -2,9 +2,12 @@ package net.hollowed.hss.common.block;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.block.custom.*;
+//import net.hollowed.hss.common.block.entity.custom.AlloyForgeBlock;
+import net.hollowed.hss.common.block.entity.custom.AlloyForgeBlock;
 import net.hollowed.hss.common.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -216,6 +219,15 @@ public class ModBlocks {
       //      () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
         //            .strength(2f, 3f));
 
+    public static final RegistryObject<Block> DUNGEON_DOOR = registerBlock("dungeon_door",
+            DungeonDoorBlock::new);
+    public static final RegistryObject<Block> DUNGEON_DOOR_OPEN = registerBlock("dungeon_door_open",
+            DungeonDoorOpenBlock::new);
+    public static final RegistryObject<Block> DUNGEON_DOOR_HITBOX = registerBlock("dungeon_door_hitbox",
+            DungeonDoorHitboxBlock::new);
+    public static final RegistryObject<Block> DUNGEON_DOOR_OPEN_HITBOX = registerBlock("dungeon_door_open_hitbox",
+            DungeonDoorOpenHitboxBlock::new);
+
 
 
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block",
@@ -236,8 +248,44 @@ public class ModBlocks {
             //        .offsetType(BlockBehaviour.OffsetType.XZ)));
 
 
+
+
+
+
+    public static final RegistryObject<Block> MOLTEN_IRON_SWORD = registerBlock("molten_iron_sword",
+            MoltenIronSword::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_PICKAXE = registerBlock("molten_iron_pickaxe",
+            MoltenIronPickaxe::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_AXE = registerBlock("molten_iron_axe",
+            MoltenIronAxe::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_SHOVEL = registerBlock("molten_iron_shovel",
+            MoltenIronShovel::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_HOE = registerBlock("molten_iron_hoe",
+            MoltenIronHoe::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_GLAIVE = registerBlock("molten_iron_glaive",
+            MoltenIronGlaive::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_GREATSWORD = registerBlock("molten_iron_greatsword",
+            MoltenIronGreatsword::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_HELMET = registerBlock("molten_iron_helmet",
+            MoltenIronHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_CHESTPLATE = registerBlock("molten_iron_chestplate",
+            MoltenIronChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_LEGGINGS = registerBlock("molten_iron_leggings",
+            MoltenIronLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_IRON_BOOTS = registerBlock("molten_iron_boots",
+            MoltenIronBoots::new);
+
+
+
+
+
     public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore",
             PlatinumOre::new);
+
+    public static final RegistryObject<Block> ALLOY_FORGE = registerBlock("alloy_forge",
+            AlloyForgeBlock::new);
+
+
     public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore",
             DeepslatePlatinumOre::new);
 
@@ -250,6 +298,12 @@ public class ModBlocks {
                     .strength(4f).requiresCorrectToolForDrops().noOcclusion()
                     .sound(SoundType.POLISHED_DEEPSLATE)));
 
+    public static final RegistryObject<Block> DUNGEON_STEEL = registerBlock("dungeon_steel",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()
+                    .strength(50.0F, 3000.0F)));
+    public static final RegistryObject<Block> ENGRAVED_DUNGEON_STEEL = registerBlock("engraved_dungeon_steel",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()
+                    .strength(50.0F, 3000.0F)));
 
     // - - Decorative Blocks - -
 
@@ -267,6 +321,35 @@ public class ModBlocks {
                     .strength(6.0F, 7.0F)));
     public static final RegistryObject<Block> SLATE = registerBlock("slate",
             Slate::new);
+
+    public static final RegistryObject<Block> ANCIENT_CLAY = registerBlock("ancient_clay",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).sound(SoundType.PACKED_MUD).requiresCorrectToolForDrops()
+                    .strength(1.0F, 3.0F)));
+    public static final RegistryObject<Block> ANCIENT_CLAY_STAIRS = registerBlock("ancient_clay_stairs",
+       () -> new StairBlock(() -> ModBlocks.ANCIENT_CLAY.get().defaultBlockState(),
+              BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_STAIRS).sound(SoundType.PACKED_MUD)
+                      .strength(1f, 3f)));
+     public static final RegistryObject<Block> ANCIENT_CLAY_SLAB = registerBlock("ancient_clay_slab",
+       () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).sound(SoundType.PACKED_MUD)
+               .strength(1f, 3f)));
+    public static final RegistryObject<Block> ANCIENT_URN = registerBlock("ancient_urn",
+            AncientUrnBlock::new);
+    public static final RegistryObject<Block> ANCIENT_CLAY_BRICKS = registerBlock("ancient_clay_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()
+                    .strength(1.0F, 3.0F)));
+    public static final RegistryObject<Block> ANCIENT_CLAY_BRICK_STAIRS = registerBlock("ancient_clay_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ANCIENT_CLAY.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_STAIRS).sound(SoundType.MUD_BRICKS)
+                            .strength(1f, 3f)));
+    public static final RegistryObject<Block> ANCIENT_CLAY_BRICK_SLAB = registerBlock("ancient_clay_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).sound(SoundType.MUD_BRICKS)
+                    .strength(1f, 3f)));
+    public static final RegistryObject<Block> ANCIENT_CLAY_BRICK_WALL = registerBlock("ancient_clay_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).sound(SoundType.MUD_BRICKS)
+                    .strength(1f, 3f)));
+    public static final RegistryObject<Block> TRIMMED_ANCIENT_CLAY = registerBlock("trimmed_ancient_clay",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).sound(SoundType.PACKED_MUD).requiresCorrectToolForDrops()
+                    .strength(1.0F, 3.0F)));
     public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.DEEPSLATE_BRICKS).requiresCorrectToolForDrops()
                     .strength(2.0F, 6.0F)));

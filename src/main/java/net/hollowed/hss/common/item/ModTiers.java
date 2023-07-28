@@ -10,21 +10,21 @@ public class ModTiers {
     public static final ForgeTier ModWood = new ForgeTier(0, 81, 7.0f,
             3f, 12, BlockTags.NEEDS_STONE_TOOL,
             () -> Ingredient.of(Items.OAK_PLANKS));
-    public static final ForgeTier ModStone = new ForgeTier(0, 153, 7.0f,
+    public static final ForgeTier ModStone = new ForgeTier(0, 131, 7.0f,
             3f, 12, BlockTags.NEEDS_STONE_TOOL,
             () -> Ingredient.of(Items.COBBLESTONE));
-    public static final ForgeTier ModIron = new ForgeTier(0, 153, 7.0f,
+    public static final ForgeTier ModIron = new ForgeTier(0, 250, 7.0f,
+            3f, 12, BlockTags.NEEDS_IRON_TOOL,
+            () -> Ingredient.of(Items.IRON_INGOT));
+    public static final ForgeTier ModGold = new ForgeTier(0, 32, 7.0f,
             3f, 12, BlockTags.NEEDS_STONE_TOOL,
-            () -> Ingredient.of(Items.COBBLESTONE));
-    public static final ForgeTier ModGold = new ForgeTier(0, 153, 7.0f,
-            3f, 12, BlockTags.NEEDS_STONE_TOOL,
-            () -> Ingredient.of(Items.COBBLESTONE));
-    public static final ForgeTier ModDiamond = new ForgeTier(0, 153, 7.0f,
-            3f, 12, BlockTags.NEEDS_STONE_TOOL,
-            () -> Ingredient.of(Items.COBBLESTONE));
+            () -> Ingredient.of(Items.GOLD_INGOT));
+    public static final ForgeTier ModDiamond = new ForgeTier(0, 1561, 7.0f,
+            3f, 12, BlockTags.NEEDS_DIAMOND_TOOL,
+            () -> Ingredient.of(Items.DIAMOND));
     public static final ForgeTier ModNetherite = new ForgeTier(0, 2031, 7.0f,
-            3f, 12, BlockTags.NEEDS_STONE_TOOL,
-            () -> Ingredient.of(Items.COBBLESTONE));
+            3f, 12, BlockTags.NEEDS_DIAMOND_TOOL,
+            () -> Ingredient.of(Items.NETHERITE_INGOT));
     public static final ForgeTier Steel = new ForgeTier(2, 752, 7.0f,
             3f, 12, BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.STEEL_INGOT.get()));

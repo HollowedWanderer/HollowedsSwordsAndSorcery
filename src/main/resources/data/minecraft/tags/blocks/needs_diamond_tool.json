@@ -3,6 +3,8 @@
   "values": [
     "hss:deepslate_platinum_ore",
     "hss:platinum_ore",
-    "hss:platinum_block"
+    "hss:platinum_block",
+    "hss:dungeon_door",
+    "hss:dungeon_door_open"
   ]
 }

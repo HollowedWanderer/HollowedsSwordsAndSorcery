@@ -22,7 +22,7 @@ modId="hss" #mandatory
 
 loader="forge:separate-perspective"
 
-version="0.0.2-1.20.1" #mandatory
+version="0.1.0-1.20.1" #mandatory
  # A display name for the mod
 displayName="Hollowed's Swords & Sorcery" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/

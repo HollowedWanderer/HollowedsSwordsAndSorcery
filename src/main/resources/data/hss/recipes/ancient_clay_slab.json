@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hss:ancient_clay"
+    }
+  },
+  "result": {
+    "item": "hss:ancient_clay_slab",
+    "count": 6
+  }
+}

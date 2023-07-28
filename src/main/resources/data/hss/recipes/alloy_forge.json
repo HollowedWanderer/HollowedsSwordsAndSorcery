@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "DBD",
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "item": "hss:silver_chunk"
+    },
+    "D": {
+      "item": "hss:slate"
+    },
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "A": {
+      "item": "minecraft:andesite"
+    }
+  },
+  "result": {
+    "item": "hss:alloy_forge",
+    "count": 1
+  }
+}

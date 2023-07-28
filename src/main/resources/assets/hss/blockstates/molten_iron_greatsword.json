@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_iron_greatsword",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_iron_greatsword"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_iron_greatsword",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_iron_greatsword",
+      "y": 270
+    }
+  }
+}

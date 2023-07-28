@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "00 ",
+    "00 ",
+    "   "
+  ],
+  "key": {
+    "0": {
+      "item": "hss:platinum"
+    }
+  },
+  "result": {
+    "item": "hss:platinum_chunk",
+    "count": 1
+  }
+}

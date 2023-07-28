@@ -18,18 +18,26 @@ public class DamageHandler {
         if (event.getEntity() instanceof Player player) {
             DamageSource source = event.getSource(); // what caused the damage
             float amount = event.getAmount(); // amount of damage taken
-            if (player.hasEffect(ModEffects.SILVER_SHIELD.get()) && shouldAffect(source)) {
-                event.setAmount(amount * 10f); // sets the amount of damage taken to
+            if (player.hasEffect(ModEffects.SILVER_SHIELD.get()) && silverShieldShouldAffect(source)) {
+                event.setAmount(amount * 0.7f); // sets the amount of damage taken to
                 // 80% of its original value
             }
         }
     }
 
-    private static boolean shouldAffect(DamageSource source) {
+    private static boolean silverShieldShouldAffect(DamageSource source) {
         return source.is(DamageTypes.ARROW) ||
                 source.is(DamageTypes.FIREBALL) ||
                 source.is(DamageTypes.FALLING_STALACTITE) ||
                 source.is(DamageTypes.FIREWORKS) ||
+                source.is(DamageTypes.INDIRECT_MAGIC) ||
+                source.is(DamageTypes.FALLING_ANVIL) ||
+                source.is(DamageTypes.DRAGON_BREATH) ||
+                source.is(DamageTypes.LIGHTNING_BOLT) ||
+                source.is(DamageTypes.SONIC_BOOM) ||
+                source.is(DamageTypes.UNATTRIBUTED_FIREBALL) ||
+                source.is(DamageTypes.WITHER) ||
+                source.is(DamageTypes.WITHER_SKULL) ||
                 source.is(DamageTypes.MAGIC); // ...
     }
 }

@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "hss:item/large_diamond"
+	},
+	"display": {
+		"gui_light": "front"
+	}
+}

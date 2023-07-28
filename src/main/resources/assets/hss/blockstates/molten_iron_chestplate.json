@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_iron_chestplate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_iron_chestplate"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_iron_chestplate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_iron_chestplate",
+      "y": 270
+    }
+  }
+}

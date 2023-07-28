@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#Nn",
+    "nnn"
+  ],
+  "key": {
+    "#": {
+      "item": "hss:ancient_clay"
+    },
+    "N": {
+      "item": "hss:ancient_clay_tablet"
+    },
+    "n": {
+      "item": "hss:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "hss:ancient_clay_tablet",
+    "count": 2
+  }
+}

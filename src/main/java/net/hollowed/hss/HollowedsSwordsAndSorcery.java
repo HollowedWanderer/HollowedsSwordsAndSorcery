@@ -2,22 +2,32 @@ package net.hollowed.hss;
 
 import com.mojang.logging.LogUtils;
 import net.hollowed.hss.common.block.ModBlocks;
+import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.client.particle.ModParticleTypes;
 import net.hollowed.hss.common.effect.ModEffects;
 import net.hollowed.hss.common.entity.ModEntityTypes;
+import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
+import net.hollowed.hss.common.entity.client.IceologerRenderer;
+import net.hollowed.hss.common.event.DamageHandler;
 import net.hollowed.hss.common.event.ModClientSetupEvents;
 import net.hollowed.hss.common.event.ModCommonSetupEvents;
+import net.hollowed.hss.common.gui.AlloyForgeScreen;
+import net.hollowed.hss.common.gui.ModMenuTypes;
 import net.hollowed.hss.common.item.ModCreativeModeTab;
 import net.hollowed.hss.common.item.ModItems;
 
 //import net.hollowed.hss.common.villager.ModVillagers;
 import net.hollowed.hss.common.enchantment.ModEnchantments;
-import net.hollowed.hss.common.world.structure.ModStructures;
+import net.hollowed.hss.common.recipe.ModRecipes;
+import net.hollowed.hss.common.sound.ModSounds;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -42,6 +52,7 @@ import java.util.function.Supplier;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HollowedsSwordsAndSorcery.MOD_ID)
+@Mod.EventBusSubscriber(modid = HollowedsSwordsAndSorcery.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class HollowedsSwordsAndSorcery {
     public static final String MOD_ID = "hss";
     public static final Logger LOGGER = LogUtils.getLogger();
@@ -79,17 +90,19 @@ public class HollowedsSwordsAndSorcery {
         ModParticleTypes.REGISTRY.register(modEventBus);
         ModCreativeModeTab.register(modEventBus);
 
-
+        ModMenuTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModEffects.register(modEventBus);
         ModEnchantments.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModEntityTypes.register(modEventBus);
+        ModSounds.register(modEventBus);
        // ModVillagers.register(modEventBus);
 
-        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
+        ModEntityTypes.REGISTRY.register(modEventBus);
 
-        ModStructures.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         GeckoLib.initialize();
 
@@ -102,6 +115,7 @@ public class HollowedsSwordsAndSorcery {
     }
 
     public void onClientSetup(final FMLClientSetupEvent event) {
+        MenuScreens.register(ModMenuTypes.ALLOY_FORGE_MENU.get(), AlloyForgeScreen::new);
         // Some client setup code
         LOGGER.info("Starting Client Setup...");
 
@@ -109,6 +123,8 @@ public class HollowedsSwordsAndSorcery {
         ModClientSetupEvents.modRenderTypes();
 
         LOGGER.info("Client Setup finished.");
+
+        EntityRenderers.register(ModEntityTypes.ICEOLOGER.get(), IceologerRenderer::new);
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
@@ -130,6 +146,42 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModItems.PLATINUM);
             event.accept(ModItems.MYTHRIL_INGOT);
             event.accept(ModItems.ENDER_DUST);
+            event.accept(ModItems.COAL_DUST);
+            event.accept(ModItems.IRON_CHUNK);
+            event.accept(ModItems.STEEL_CHUNK);
+            event.accept(ModItems.SILVER_CHUNK);
+            event.accept(ModItems.GOLD_CHUNK);
+            event.accept(ModItems.LARGE_DIAMOND);
+            event.accept(ModItems.PLATINUM_CHUNK);
+            event.accept(ModItems.BLANK_CLAY_TABLET);
+            event.accept(ModItems.SWORD_MOLD);
+            event.accept(ModItems.PICKAXE_MOLD);
+            event.accept(ModItems.AXE_MOLD);
+            event.accept(ModItems.SHOVEL_MOLD);
+            event.accept(ModItems.HOE_MOLD);
+            event.accept(ModItems.GREATSWORD_MOLD);
+            event.accept(ModItems.GLAIVE_MOLD);
+            event.accept(ModItems.HELMET_MOLD);
+            event.accept(ModItems.CHESTPLATE_MOLD);
+            event.accept(ModItems.LEGGINGS_MOLD);
+            event.accept(ModItems.BOOTS_MOLD);
+            event.accept(ModItems.ANCIENT_CLAY_TABLET);
+            event.accept(ModItems.ANCIENT_SWORD_MOLD);
+            event.accept(ModItems.ANCIENT_PICKAXE_MOLD);
+            event.accept(ModItems.ANCIENT_AXE_MOLD);
+            event.accept(ModItems.ANCIENT_SHOVEL_MOLD);
+            event.accept(ModItems.ANCIENT_HOE_MOLD);
+            event.accept(ModItems.ANCIENT_GREATSWORD_MOLD);
+            event.accept(ModItems.ANCIENT_GLAIVE_MOLD);
+            event.accept(ModItems.ANCIENT_HELMET_MOLD);
+            event.accept(ModItems.ANCIENT_CHESTPLATE_MOLD);
+            event.accept(ModItems.ANCIENT_LEGGINGS_MOLD);
+            event.accept(ModItems.ANCIENT_BOOTS_MOLD);
+            event.accept(ModItems.WOODEN_HELMET_TEMPLATE);
+            event.accept(ModItems.WOODEN_CHESTPLATE_TEMPLATE);
+            event.accept(ModItems.WOODEN_LEGGINGS_TEMPLATE);
+            event.accept(ModItems.WOODEN_BOOTS_TEMPLATE);
+            event.accept(ModItems.GREAT_HAMMER);
             event.accept(ModItems.DEATHS_SCYTHE);
             event.accept(ModItems.STEEL_SWORD);
             event.accept(ModItems.STEEL_PICKAXE);
@@ -177,8 +229,11 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModItems.STAFF_OF_THUNDERING);
         }
         if(event.getTab() == ModCreativeModeTab.BLOCKS_TAB.get()) {
+            event.accept(ModBlocks.ALLOY_FORGE);
             event.accept(ModBlocks.PLATINUM_ORE);
             event.accept(ModBlocks.DEEPSLATE_PLATINUM_ORE);
+            event.accept(ModBlocks.DUNGEON_STEEL);
+            event.accept(ModBlocks.ENGRAVED_DUNGEON_STEEL);
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.INFERNIUM_BLOCK);
             event.accept(ModBlocks.ZEPHYRITE_BLOCK);
@@ -194,8 +249,18 @@ public class HollowedsSwordsAndSorcery {
             //event.accept(ModBlocks.SLATE_BRICK_WALL);
             //event.accept(ModBlocks.SLATE_TILE_SLAB);
             //event.accept(ModBlocks.SLATE_TILE_STAIRS);
+            event.accept(ModBlocks.ANCIENT_CLAY);
+            event.accept(ModBlocks.ANCIENT_CLAY_STAIRS);
+            event.accept(ModBlocks.ANCIENT_CLAY_SLAB);
+            event.accept(ModBlocks.ANCIENT_CLAY_BRICKS);
+            event.accept(ModBlocks.ANCIENT_CLAY_BRICK_STAIRS);
+            event.accept(ModBlocks.ANCIENT_CLAY_BRICK_SLAB);
+            event.accept(ModBlocks.ANCIENT_CLAY_BRICK_WALL);
+            event.accept(ModBlocks.TRIMMED_ANCIENT_CLAY);
+            event.accept(ModBlocks.ANCIENT_URN);
             event.accept(ModBlocks.VERTICAL_DARK_OAK_PLANKS);
             event.accept(ModBlocks.BROWN_TERRACOTTA_SHINGLES);
+            event.accept(ModBlocks.DUNGEON_DOOR);
         }
     }
 

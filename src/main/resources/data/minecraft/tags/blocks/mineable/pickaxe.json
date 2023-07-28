@@ -12,6 +12,20 @@
     "hss:mythril_block",
     "hss:slate",
     "hss:slate_tiles",
-    "hss:slate_bricks"
+    "hss:slate_bricks",
+    "hss:trimmed_ancient_clay",
+    "hss:ancient_clay",
+    "hss:ancient_clay_stairs",
+    "hss:ancient_clay_slab",
+    "hss:ancient_clay_bricks",
+    "hss:ancient_clay_brick_stairs",
+    "hss:ancient_clay_brick_slab",
+    "hss:ancient_clay_brick_wall",
+    "hss:alloy_forge",
+    "hss:brown_terracotta_shingles",
+    "hss:dungeon_door",
+    "hss:dungeon_door_open",
+
+    "hss:molten_iron_sword"
   ]
 }

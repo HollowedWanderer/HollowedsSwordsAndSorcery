@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hss:wooden_leggings_template"
+    },
+    {
+      "item": "hss:ancient_clay_tablet"
+    }
+  ],
+  "result": {
+    "item": "hss:ancient_leggings_mold",
+    "count": 1
+  }
+}

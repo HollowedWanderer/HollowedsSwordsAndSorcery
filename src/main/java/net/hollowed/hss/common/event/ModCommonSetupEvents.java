@@ -3,6 +3,7 @@ package net.hollowed.hss.common.event;
 import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
+import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.hollowed.hss.common.item.ModItems;
 //import net.hollowed.hss.common.item.custom.ParagliderItem;
 //import net.hollowed.hss.common.villager.ModVillagers;
@@ -25,7 +26,6 @@ public class ModCommonSetupEvents {
 		@SubscribeEvent
 		public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
 
-			event.put(ModEntityTypes.DEEPSLATE_GOLEM.get(), DeepslateGolemEntity.setAttributes());
 
 		}
 	}

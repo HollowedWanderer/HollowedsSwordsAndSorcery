@@ -92,7 +92,7 @@ public class DeepslateGolemEntity extends Monster implements GeoEntity {
     }
 
     protected float getSoundVolume() {
-        return 0.2F;
+        return 1F;
     }
 
 }

@@ -1,11 +1,53 @@
 {
-  "heavy_step": {
-    "subtitle": "sounds.hss.heavy_step",
+  "iceologer_ambient": {
+    "subtitle": "subtitles.iceologer_ambient",
     "sounds": [
-      "hss:heavystep1",
-      "hss:heavystep2",
-      "hss:heavystep3",
-      "hss:heavystep4"
+      {
+        "name": "hss:iceologer_ambient3",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_ambient2",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "iceologer_hurt": {
+    "subtitle": "subtitles.iceologer_hurt",
+    "sounds": [
+      {
+        "name": "hss:iceologer_hurt3",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_hurt2",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "iceologer_death": {
+    "subtitle": "subtitles.iceologer_death",
+    "sounds": [
+      {
+        "name": "hss:iceologer_death3",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_death2",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_death1",
+        "stream": false
+      }
     ]
   }
 }

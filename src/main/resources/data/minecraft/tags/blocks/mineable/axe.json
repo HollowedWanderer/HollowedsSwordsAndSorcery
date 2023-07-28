@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "hss:stick_bundle"
+    "hss:stick_bundle",
+    "hss:vertical_dark_oak_planks"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hss:wooden_boots_template"
+    },
+    {
+      "item": "hss:ancient_clay_tablet"
+    }
+  ],
+  "result": {
+    "item": "hss:ancient_boots_mold",
+    "count": 1
+  }
+}

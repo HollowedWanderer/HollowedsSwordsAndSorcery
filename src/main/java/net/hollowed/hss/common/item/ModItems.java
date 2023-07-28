@@ -26,11 +26,163 @@ public class ModItems {
     public static final RegistryObject<Item> ENDER_DUST = ITEMS.register("ender_dust",
             () -> new Item(new Item.Properties().stacksTo(64)
                     ));
+    public static final RegistryObject<Item> COAL_DUST = ITEMS.register("coal_dust",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+    public static final RegistryObject<Item> BLANK_CLAY_TABLET = ITEMS.register("blank_clay_tablet",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+    public static final RegistryObject<Item> SWORD_MOLD = ITEMS.register("sword_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> PICKAXE_MOLD = ITEMS.register("pickaxe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> AXE_MOLD = ITEMS.register("axe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> SHOVEL_MOLD = ITEMS.register("shovel_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> HOE_MOLD = ITEMS.register("hoe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> GREATSWORD_MOLD = ITEMS.register("greatsword_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> GLAIVE_MOLD = ITEMS.register("glaive_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> HELMET_MOLD = ITEMS.register("helmet_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> CHESTPLATE_MOLD = ITEMS.register("chestplate_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> LEGGINGS_MOLD = ITEMS.register("leggings_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> BOOTS_MOLD = ITEMS.register("boots_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_CLAY_TABLET = ITEMS.register("ancient_clay_tablet",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+    public static final RegistryObject<Item> ANCIENT_SWORD_MOLD = ITEMS.register("ancient_sword_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_PICKAXE_MOLD = ITEMS.register("ancient_pickaxe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_AXE_MOLD = ITEMS.register("ancient_axe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_SHOVEL_MOLD = ITEMS.register("ancient_shovel_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_HOE_MOLD = ITEMS.register("ancient_hoe_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_GREATSWORD_MOLD = ITEMS.register("ancient_greatsword_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_GLAIVE_MOLD = ITEMS.register("ancient_glaive_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_HELMET_MOLD = ITEMS.register("ancient_helmet_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_CHESTPLATE_MOLD = ITEMS.register("ancient_chestplate_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_LEGGINGS_MOLD = ITEMS.register("ancient_leggings_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> ANCIENT_BOOTS_MOLD = ITEMS.register("ancient_boots_mold",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+    public static final RegistryObject<Item> WOODEN_HELMET_TEMPLATE = ITEMS.register("wooden_helmet_template",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> WOODEN_CHESTPLATE_TEMPLATE = ITEMS.register("wooden_chestplate_template",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> WOODEN_LEGGINGS_TEMPLATE = ITEMS.register("wooden_leggings_template",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> WOODEN_BOOTS_TEMPLATE = ITEMS.register("wooden_boots_template",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+
+    public static final RegistryObject<Item> IRON_CHUNK = ITEMS.register("iron_chunk",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> STEEL_CHUNK = ITEMS.register("steel_chunk",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> SILVER_CHUNK = ITEMS.register("silver_chunk",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> GOLD_CHUNK = ITEMS.register("gold_chunk",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> LARGE_DIAMOND = ITEMS.register("large_diamond",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+    public static final RegistryObject<Item> PLATINUM_CHUNK = ITEMS.register("platinum_chunk",
+            () -> new Item(new Item.Properties().stacksTo(64)
+            ));
+
+
+
+
+
+
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_SWORD = ITEMS.register("shaped_molten_iron_sword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_PICKAXE = ITEMS.register("shaped_molten_iron_pickaxe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_AXE = ITEMS.register("shaped_molten_iron_axe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_SHOVEL = ITEMS.register("shaped_molten_iron_shovel",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_HOE = ITEMS.register("shaped_molten_iron_hoe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_GLAIVE = ITEMS.register("shaped_molten_iron_glaive",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_GREATSWORD = ITEMS.register("shaped_molten_iron_greatsword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_HELMET = ITEMS.register("shaped_molten_iron_helmet",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_CHESTPLATE = ITEMS.register("shaped_molten_iron_chestplate",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_LEGGINGS = ITEMS.register("shaped_molten_iron_leggings",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_BOOTS = ITEMS.register("shaped_molten_iron_boots",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+
+
 
 
     public static final RegistryObject<Item> SILVER_PLATED_CROSSBOW = ITEMS.register("silver_plated_crossbow",
             () -> new SpeedCrossbowItem(
-                    new Item.Properties()));
+                    new Item.Properties().durability(654)));
 
     public static final RegistryObject<Item> PLATINUM = ITEMS.register("platinum",
             () -> new Item(new Item.Properties().stacksTo(64)));
@@ -131,7 +283,7 @@ public class ModItems {
             () -> new HeavySwordItem(ModTiers.ModIron, 1, -2.4f,
                     new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive",
-         () -> new HeavySwordItem(ModTiers.ModGold, 1, -2.4f,
+         () -> new HeavySwordItem(ModTiers.ModGold, -1, -2.4f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive",
             () -> new HeavySwordItem(ModTiers.ModDiamond, 2, -2.3f,
