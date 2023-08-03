@@ -1,8 +1,10 @@
 package net.hollowed.hss.common.item;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
+import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.item.custom.*;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,6 +13,13 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, HollowedsSwordsAndSorcery.MOD_ID);
+
+    /** Entity Spawn Eggs **/
+
+    public static final RegistryObject<Item> ICEOLOGER_SPAWN_EGG = ITEMS.register("iceologer_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ICEOLOGER, 0x005bb0, 0x9cd9ff,
+                    new Item.Properties()));
+
 
 
     public static final RegistryObject<Item> STAFF_OF_THUNDERING = ITEMS.register("staff_of_thundering",
@@ -174,6 +183,18 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1)
             ));
     public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_BOOTS = ITEMS.register("shaped_molten_iron_boots",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_SILVER_HELMET = ITEMS.register("shaped_molten_silver_helmet",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_SILVER_PLATED_CHESTPIECE = ITEMS.register("shaped_molten_silver_plated_chestpiece",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_SILVER_PLATED_LEGGINGS = ITEMS.register("shaped_molten_silver_plated_leggings",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_SILVER_TIPPED_BOOTS = ITEMS.register("shaped_molten_silver_tipped_boots",
             () -> new Item(new Item.Properties().stacksTo(1)
             ));
 

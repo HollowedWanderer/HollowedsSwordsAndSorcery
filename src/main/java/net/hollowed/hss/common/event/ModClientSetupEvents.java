@@ -3,6 +3,8 @@ package net.hollowed.hss.common.event;
 import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
+import net.hollowed.hss.common.entity.client.IceChunkRenderer;
+import net.hollowed.hss.common.entity.client.IceSpikesRenderer;
 import net.hollowed.hss.common.entity.client.IceologerRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -19,6 +21,8 @@ public class ModClientSetupEvents {
 
 	public static void modRenderTypes() {
 		EntityRenderers.register(ModEntityTypes.ICEOLOGER.get(), IceologerRenderer::new);
+		EntityRenderers.register(ModEntityTypes.ICE_CHUNK.get(), IceChunkRenderer::new);
+		EntityRenderers.register(ModEntityTypes.ICE_SPIKES.get(), IceSpikesRenderer::new);
 
 
 		// ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPLE_STATUE.get(), RenderType.cutout());

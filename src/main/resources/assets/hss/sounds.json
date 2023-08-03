@@ -49,5 +49,31 @@
         "stream": false
       }
     ]
+  },
+  "iceologer_attack": {
+    "subtitle": "subtitles.iceologer_attack",
+    "sounds": [
+      {
+        "name": "hss:iceologer_attack3",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_attack2",
+        "stream": false
+      },
+      {
+        "name": "hss:iceologer_attack1",
+        "stream": false
+      }
+    ]
+  },
+  "ice_chunk_smash": {
+    "subtitle": "subtitles.ice_chunk_smash",
+    "sounds": [
+      {
+        "name": "hss:ice_chunk_smash1",
+        "stream": false
+      }
+    ]
   }
 }

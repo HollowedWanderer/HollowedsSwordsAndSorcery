@@ -20,5 +20,7 @@ public class ModParticleTypes {
             () -> new SimpleParticleType(false));
     public static final RegistryObject<SimpleParticleType> DEATH_SWEEP = REGISTRY.register("death_sweep",
             () -> new SimpleParticleType(false));
+    public static final RegistryObject<SimpleParticleType> ICE_PORTAL = REGISTRY.register("ice_portal",
+            () -> new SimpleParticleType(false));
 }
 

@@ -16,6 +16,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> ICEOLOGER_AMBIENT = registerSoundEvent("iceologer_ambient");
     public static final RegistryObject<SoundEvent> ICEOLOGER_HURT = registerSoundEvent("iceologer_hurt");
     public static final RegistryObject<SoundEvent> ICEOLOGER_DEATH = registerSoundEvent("iceologer_death");
+    public static final RegistryObject<SoundEvent> ICEOLOGER_ATTACK = registerSoundEvent("iceologer_attack");
+    public static final RegistryObject<SoundEvent> ICE_CHUNK_SMASH = registerSoundEvent("ice_chunk_smash");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         ResourceLocation id = new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, name);

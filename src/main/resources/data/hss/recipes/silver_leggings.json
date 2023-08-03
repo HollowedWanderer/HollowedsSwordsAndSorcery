@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:leggings_mold"
+    },
+    {
+      "item": "hss:silver_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_silver_plated_leggings",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

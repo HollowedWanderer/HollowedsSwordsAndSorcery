@@ -34,10 +34,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
         return Ingredient.of(ModItems.PLATINUM.get());
     }),
     SILVER("silver", 12,Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.BOOTS, 2);
+        p_266655_.put(ArmorItem.Type.BOOTS, 1);
         p_266655_.put(ArmorItem.Type.LEGGINGS, 4);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266655_.put(ArmorItem.Type.HELMET, 3);
+        p_266655_.put(ArmorItem.Type.HELMET, 2);
     }), 12, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.SILVER_SCRAP.get());
     });

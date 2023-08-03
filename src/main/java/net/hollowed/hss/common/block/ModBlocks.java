@@ -275,6 +275,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOLTEN_IRON_BOOTS = registerBlock("molten_iron_boots",
             MoltenIronBoots::new);
 
+    public static final RegistryObject<Block> MOLTEN_SILVER_HELMET = registerBlock("molten_silver_helmet",
+            MoltenSilverHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_SILVER_PLATED_CHESTPIECE = registerBlock("molten_silver_plated_chestpiece",
+            MoltenSilverChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_SILVER_PLATED_LEGGINGS = registerBlock("molten_silver_plated_leggings",
+            MoltenSilverLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_SILVER_TIPPED_BOOTS = registerBlock("molten_silver_tipped_boots",
+            MoltenSilverBoots::new);
+
 
 
 
@@ -314,8 +323,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .strength(6.0F, 7.0F)));
     public static final RegistryObject<Block> INFERNIUM_BLOCK = registerBlock("infernium_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL).requiresCorrectToolForDrops()
-                    .strength(6.0F, 7.0F)));
+            InferniumBlock::new);
     public static final RegistryObject<Block> ZEPHYRITE_BLOCK = registerBlock("zephyrite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .strength(6.0F, 7.0F)));

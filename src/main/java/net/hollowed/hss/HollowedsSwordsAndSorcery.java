@@ -7,6 +7,7 @@ import net.hollowed.hss.common.client.particle.ModParticleTypes;
 import net.hollowed.hss.common.effect.ModEffects;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
+import net.hollowed.hss.common.entity.client.IceSpikesRenderer;
 import net.hollowed.hss.common.entity.client.IceologerRenderer;
 import net.hollowed.hss.common.event.DamageHandler;
 import net.hollowed.hss.common.event.ModClientSetupEvents;
@@ -82,6 +83,12 @@ public class HollowedsSwordsAndSorcery {
         }
     }
 
+    private void setup(final FMLCommonSetupEvent event) {
+        // Register your packet handler class
+        int id = 1234897; // Use a unique ID for your packet
+    }
+
+
 
     public HollowedsSwordsAndSorcery() {
 
@@ -125,6 +132,7 @@ public class HollowedsSwordsAndSorcery {
         LOGGER.info("Client Setup finished.");
 
         EntityRenderers.register(ModEntityTypes.ICEOLOGER.get(), IceologerRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ICE_SPIKES.get(), IceSpikesRenderer::new);
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
@@ -261,6 +269,9 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModBlocks.VERTICAL_DARK_OAK_PLANKS);
             event.accept(ModBlocks.BROWN_TERRACOTTA_SHINGLES);
             event.accept(ModBlocks.DUNGEON_DOOR);
+        }
+        if(event.getTab() == ModCreativeModeTab.ENTITIES_TAB.get()) {
+            event.accept(ModItems.ICEOLOGER_SPAWN_EGG);
         }
     }
 

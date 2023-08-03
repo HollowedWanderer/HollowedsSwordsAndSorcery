@@ -1,7 +1,11 @@
 {
+  "item.hss.iceologer_spawn_egg": "Iceologer Spawn Egg",
+
   "subtitles.iceologer_ambient": "Iceologer Growls",
   "subtitles.iceologer_hurt": "Iceologer Hurts",
   "subtitles.iceologer_death": "Iceologer Dies",
+  "subtitles.iceologer_attack": "Iceologer Prepares Summon",
+  "subtitles.ice_chunk_smash": "Ice Chunk Smashes",
 
   "effect.hss.silver_shield": "Silver Shield",
   "enchantment.hss.curse_of_shattering": "Curse of Shattering",
@@ -150,6 +154,15 @@
   "block.hss.molten_iron_leggings": "Molten Iron Leggings",
   "item.hss.shaped_molten_iron_boots": "Shaped Molten Iron Boots",
   "block.hss.molten_iron_boots": "Molten Iron Boots",
+
+  "item.hss.shaped_molten_silver_helmet": "Shaped Molten Silver Helmet",
+  "block.hss.molten_silver_helmet": "Molten Silver Helmet",
+  "item.hss.shaped_molten_silver_plated_chestpiece": "Shaped Molten Silver Plated Chestpiece",
+  "block.hss.molten_silver_plated_chestpiece": "Molten Silver Plated Chestpiece",
+  "item.hss.shaped_molten_silver_plated_leggings": "Shaped Molten Silver Plated Leggings",
+  "block.hss.molten_silver_plated_leggings": "Molten Silver Plated Leggings",
+  "item.hss.shaped_molten_silver_tipped_boots": "Shaped Molten Silver Tipped Boots",
+  "block.hss.molten_silver_tipped_boots": "Molten Silver Tipped Boots",
 
 
 

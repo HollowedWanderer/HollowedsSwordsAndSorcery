@@ -1,9 +1,18 @@
 package net.hollowed.hss.common.entity.custom;
 
 import net.hollowed.hss.common.entity.ModEntityTypes;
+import net.hollowed.hss.common.event.IceologerAttack;
 import net.hollowed.hss.common.event.IceologerHurt;
 import net.hollowed.hss.common.event.IceologerTick;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.level.ServerLevelAccessor;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -17,19 +26,8 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
@@ -41,15 +39,20 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import javax.annotation.Nullable;
+
 public class IceologerEntity extends Monster implements GeoEntity {
+
+    public static boolean casting;
+    public static boolean castingCheck;
+    public static boolean iceChunkCooldown;
+
+    static boolean FuncOnce;
     public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(IceologerEntity.class, EntityDataSerializers.BOOLEAN);
     public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(IceologerEntity.class, EntityDataSerializers.STRING);
     public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(IceologerEntity.class, EntityDataSerializers.STRING);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private boolean swinging;
-    private boolean lastloop;
-    private long lastSwing;
-    public String animationprocedure = "empty";
+
 
     public IceologerEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(ModEntityTypes.ICEOLOGER.get(), world);
@@ -59,6 +62,7 @@ public class IceologerEntity extends Monster implements GeoEntity {
         super(type, world);
         xpReward = 0;
         setNoAi(false);
+        setPersistenceRequired();
     }
 
     @Override
@@ -85,11 +89,14 @@ public class IceologerEntity extends Monster implements GeoEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, Player.class, (float) 7, 1, 1.2));
-        this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, ServerPlayer.class, (float) 7, 1, 1.2));
-        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(5, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, (float) 16));
+        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, ServerPlayer.class, (float) 16));
+        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, (float) 4, 1, 1.2));
+        this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, ServerPlayer.class, (float) 4, 1, 1.2));
+        this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(9, new FloatGoal(this));
+
     }
 
     @Override
@@ -114,36 +121,35 @@ public class IceologerEntity extends Monster implements GeoEntity {
 
     @Override
     public boolean hurt(DamageSource source, float amount) {
-        IceologerHurt.execute(source.getEntity());
+        IceologerHurt.execute(this, source.getEntity());
         return super.hurt(source, amount);
     }
 
     @Override
     public void baseTick() {
         super.baseTick();
-        IceologerTick.execute(this.level(), this);
+        IceologerTick.execute(this);
         this.refreshDimensions();
     }
 
     @Override
-    public EntityDimensions getDimensions(Pose p_33597_) {
+    public @NotNull EntityDimensions getDimensions(@NotNull Pose p_33597_) {
         return super.getDimensions(p_33597_).scale((float) 1);
     }
 
     public static void init() {
-        SpawnPlacements.register(ModEntityTypes.ICEOLOGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-        builder = builder.add(Attributes.MAX_HEALTH, 10);
-        builder = builder.add(Attributes.ARMOR, 0);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.35);
+        builder = builder.add(Attributes.MAX_HEALTH, 40);
+        builder = builder.add(Attributes.ARMOR, 4);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16);
         return builder;
     }
+
 
     private PlayState predicate(AnimationState animationState) {
         if(animationState.isMoving()) {
@@ -155,22 +161,21 @@ public class IceologerEntity extends Monster implements GeoEntity {
         return PlayState.CONTINUE;
     }
 
-    private PlayState attackPredicate(AnimationState state) {
-        if(this.swinging) {
+    private PlayState spellPredicate(AnimationState state) {
+        if(IceologerEntity.casting) {
             state.getController().forceAnimationReset();
             state.getController().setAnimation(RawAnimation.begin().then("spell", Animation.LoopType.PLAY_ONCE));
-            this.swinging = false;
+            IceologerEntity.casting = false;
         }
-
         return PlayState.CONTINUE;
     }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController(this, "controller",
-                0, this::predicate));
-        controllers.add(new AnimationController(this, "attackController",
-                0, this::attackPredicate));
+        controllers.add(new AnimationController<>(this, "controller",
+                4, this::predicate));
+        controllers.add(new AnimationController<>(this, "spellController",
+                4, this::spellPredicate));
     }
 
     @Override
@@ -193,5 +198,9 @@ public class IceologerEntity extends Monster implements GeoEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+    }
+
+    protected float getSoundVolume() {
+        return 0.2F;
     }
 }

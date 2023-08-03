@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:chestplate_mold"
+    },
+    {
+      "item": "hss:silver_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_silver_plated_chestpiece",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

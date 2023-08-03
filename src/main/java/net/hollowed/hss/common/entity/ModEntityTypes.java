@@ -1,6 +1,8 @@
 package net.hollowed.hss.common.entity;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
+import net.hollowed.hss.common.entity.custom.IceChunkEntity;
+import net.hollowed.hss.common.entity.custom.IceSpikesEntity;
 import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,6 +23,13 @@ public class ModEntityTypes {
             EntityType.Builder.<IceologerEntity>of(IceologerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IceologerEntity::new)
 
                     .sized(0.6f, 1.8f));
+    public static final RegistryObject<EntityType<IceChunkEntity>> ICE_CHUNK = register("ice_chunk",
+            EntityType.Builder.<IceChunkEntity>of(IceChunkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+                    .setCustomClientFactory(IceChunkEntity::new).fireImmune().sized(2.0f, 1f));
+
+    public static final RegistryObject<EntityType<IceSpikesEntity>> ICE_SPIKES = register("ice_spikes",
+            EntityType.Builder.<IceSpikesEntity>of(IceSpikesEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+                    .setCustomClientFactory(IceSpikesEntity::new).fireImmune().sized(0.1f, 0.1f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -28,14 +37,14 @@ public class ModEntityTypes {
 
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            IceologerEntity.init();
-        });
+        event.enqueueWork(IceologerEntity::init);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ICEOLOGER.get(), IceologerEntity.createAttributes().build());
+        event.put(ICE_CHUNK.get(), IceologerEntity.createAttributes().build());
+        event.put(ICE_SPIKES.get(), IceologerEntity.createAttributes().build());
     }
 }
 
