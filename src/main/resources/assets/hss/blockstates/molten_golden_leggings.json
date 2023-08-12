@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_golden_leggings",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_golden_leggings"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_golden_leggings",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_golden_leggings",
+      "y": 270
+    }
+  }
+}

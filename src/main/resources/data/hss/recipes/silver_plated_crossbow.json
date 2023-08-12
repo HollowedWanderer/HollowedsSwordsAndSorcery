@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/I/",
+    "STS",
+    "i/i"
+  ],
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "item": "hss:silver_chunk"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "T": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "i": {
+      "item": "hss:silver_scrap"
+    }
+  },
+  "result": {
+    "item": "hss:silver_plated_crossbow",
+    "count": 1
+  }
+}

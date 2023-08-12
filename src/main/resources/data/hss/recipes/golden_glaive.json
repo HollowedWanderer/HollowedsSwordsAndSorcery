@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:glaive_mold"
+    },
+    {
+      "item": "hss:gold_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_golden_glaive",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_golden_helmet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_golden_helmet"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_golden_helmet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_golden_helmet",
+      "y": 270
+    }
+  }
+}

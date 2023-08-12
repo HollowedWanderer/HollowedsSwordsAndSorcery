@@ -284,6 +284,52 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOLTEN_SILVER_TIPPED_BOOTS = registerBlock("molten_silver_tipped_boots",
             MoltenSilverBoots::new);
 
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_SWORD = registerBlock("molten_golden_sword",
+            MoltenGoldenSword::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_PICKAXE = registerBlock("molten_golden_pickaxe",
+            MoltenGoldenPickaxe::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_AXE = registerBlock("molten_golden_axe",
+            MoltenGoldenAxe::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_SHOVEL = registerBlock("molten_golden_shovel",
+            MoltenGoldenShovel::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_HOE = registerBlock("molten_golden_hoe",
+            MoltenGoldenHoe::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_GLAIVE = registerBlock("molten_golden_glaive",
+            MoltenGoldenGlaive::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_GREATSWORD = registerBlock("molten_golden_greatsword",
+            MoltenGoldenGreatsword::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_HELMET = registerBlock("molten_golden_helmet",
+            MoltenGoldenHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_CHESTPLATE = registerBlock("molten_golden_chestplate",
+            MoltenGoldenChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_LEGGINGS = registerBlock("molten_golden_leggings",
+            MoltenGoldenLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_GOLDEN_BOOTS = registerBlock("molten_golden_boots",
+            MoltenGoldenBoots::new);
+
+    public static final RegistryObject<Block> MOLTEN_STEEL_SWORD = registerBlock("molten_steel_sword",
+            MoltenSteelSword::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_PICKAXE = registerBlock("molten_steel_pickaxe",
+            MoltenSteelPickaxe::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_AXE = registerBlock("molten_steel_axe",
+            MoltenSteelAxe::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_SHOVEL = registerBlock("molten_steel_shovel",
+            MoltenSteelShovel::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_HOE = registerBlock("molten_steel_hoe",
+            MoltenSteelHoe::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_GLAIVE = registerBlock("molten_steel_glaive",
+            MoltenSteelGlaive::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_GREATSWORD = registerBlock("molten_steel_greatsword",
+            MoltenSteelGreatsword::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_HELMET = registerBlock("molten_steel_helmet",
+            MoltenSteelHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_CHESTPLATE = registerBlock("molten_steel_chestplate",
+            MoltenSteelChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_LEGGINGS = registerBlock("molten_steel_leggings",
+            MoltenSteelLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_STEEL_BOOTS = registerBlock("molten_steel_boots",
+            MoltenSteelBoots::new);
+
 
 
 

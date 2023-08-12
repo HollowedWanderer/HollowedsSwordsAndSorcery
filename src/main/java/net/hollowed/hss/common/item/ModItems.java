@@ -185,6 +185,8 @@ public class ModItems {
     public static final RegistryObject<Item> SHAPED_MOLTEN_IRON_BOOTS = ITEMS.register("shaped_molten_iron_boots",
             () -> new Item(new Item.Properties().stacksTo(1)
             ));
+
+
     public static final RegistryObject<Item> SHAPED_MOLTEN_SILVER_HELMET = ITEMS.register("shaped_molten_silver_helmet",
             () -> new Item(new Item.Properties().stacksTo(1)
             ));
@@ -199,11 +201,87 @@ public class ModItems {
             ));
 
 
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_SWORD = ITEMS.register("shaped_molten_golden_sword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_PICKAXE = ITEMS.register("shaped_molten_golden_pickaxe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_AXE = ITEMS.register("shaped_molten_golden_axe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_SHOVEL = ITEMS.register("shaped_molten_golden_shovel",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_HOE = ITEMS.register("shaped_molten_golden_hoe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_GLAIVE = ITEMS.register("shaped_molten_golden_glaive",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_GREATSWORD = ITEMS.register("shaped_molten_golden_greatsword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_HELMET = ITEMS.register("shaped_molten_golden_helmet",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_CHESTPLATE = ITEMS.register("shaped_molten_golden_chestplate",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_LEGGINGS = ITEMS.register("shaped_molten_golden_leggings",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_GOLDEN_BOOTS = ITEMS.register("shaped_molten_golden_boots",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+
+
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_SWORD = ITEMS.register("shaped_molten_steel_sword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_PICKAXE = ITEMS.register("shaped_molten_steel_pickaxe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_AXE = ITEMS.register("shaped_molten_steel_axe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_SHOVEL = ITEMS.register("shaped_molten_steel_shovel",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_HOE = ITEMS.register("shaped_molten_steel_hoe",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_GLAIVE = ITEMS.register("shaped_molten_steel_glaive",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_GREATSWORD = ITEMS.register("shaped_molten_steel_greatsword",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_HELMET = ITEMS.register("shaped_molten_steel_helmet",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_CHESTPLATE = ITEMS.register("shaped_molten_steel_chestplate",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_LEGGINGS = ITEMS.register("shaped_molten_steel_leggings",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> SHAPED_MOLTEN_STEEL_BOOTS = ITEMS.register("shaped_molten_steel_boots",
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+
+
 
 
     public static final RegistryObject<Item> SILVER_PLATED_CROSSBOW = ITEMS.register("silver_plated_crossbow",
             () -> new SpeedCrossbowItem(
                     new Item.Properties().durability(654)));
+
+
+
+    public static final RegistryObject<Item> LEGENDARY_KEY = ITEMS.register("legendary_key",
+            () -> new EdibleKeyItem(new Item.Properties().stacksTo(64)));
+
 
     public static final RegistryObject<Item> PLATINUM = ITEMS.register("platinum",
             () -> new Item(new Item.Properties().stacksTo(64)));
@@ -271,7 +349,7 @@ public class ModItems {
             () -> new BlockingSword(ModTiers.Platinum, 6, -2.8f,
                     new Item.Properties()));
     public static final RegistryObject<Item> PLATINUM_GLAIVE = ITEMS.register("platinum_glaive",
-            () -> new HeavySwordItem(ModTiers.Platinum, 3, -2.3f,
+            () -> new HeavySwordItem(ModTiers.Platinum, 3, -2.4f,
                     new Item.Properties()));
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new SilverArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.HELMET,
@@ -307,10 +385,10 @@ public class ModItems {
          () -> new HeavySwordItem(ModTiers.ModGold, -1, -2.4f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive",
-            () -> new HeavySwordItem(ModTiers.ModDiamond, 2, -2.3f,
+            () -> new HeavySwordItem(ModTiers.ModDiamond, 2, -2.4f,
                     new Item.Properties()));
     public static final RegistryObject<Item> NETHERITE_GLAIVE = ITEMS.register("netherite_glaive",
-            () -> new HeavySwordItem(ModTiers.ModNetherite, 3, -2.3f,
+            () -> new HeavySwordItem(ModTiers.ModNetherite, 3, -2.4f,
                     new Item.Properties().fireResistant()));
  public static final RegistryObject<Item> WOODEN_GREATSWORD = ITEMS.register("wooden_greatsword",
          () -> new BlockingSword(ModTiers.ModWood, 2, -2.8f,

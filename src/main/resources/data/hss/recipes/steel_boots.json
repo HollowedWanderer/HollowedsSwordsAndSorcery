@@ -1,16 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "# #",
-    "# #"
-  ],
-  "key": {
-    "#": {
-      "item": "hss:steel_ingot"
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:boots_mold"
+    },
+    {
+      "item": "hss:steel_block"
     }
-  },
-  "result": {
-    "item": "hss:steel_boots",
+  ],
+  "output": {
+    "item": "hss:molten_steel_boots",
     "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
   }
 }

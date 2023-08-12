@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_steel_glaive",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_steel_glaive"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_steel_glaive",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_steel_glaive",
+      "y": 270
+    }
+  }
+}

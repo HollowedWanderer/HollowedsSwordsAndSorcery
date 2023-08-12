@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "hss:item/molten_hoe_base"
+	},
+	"display": {
+		"gui_light": "front"
+	}
+}

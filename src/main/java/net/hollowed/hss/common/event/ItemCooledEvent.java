@@ -341,5 +341,445 @@ public class ItemCooledEvent {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
 		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_SWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_SWORD);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_PICKAXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_PICKAXE);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_AXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_AXE);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_SHOVEL.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_SHOVEL);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_HOE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_HOE);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_GLAIVE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.GOLDEN_GLAIVE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_GREATSWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.GOLDEN_GREATSWORD.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_HELMET.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_HELMET);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_CHESTPLATE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_CHESTPLATE);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_LEGGINGS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_LEGGINGS);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_BOOTS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(Items.GOLDEN_BOOTS);
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_SWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_SWORD.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_PICKAXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_PICKAXE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_AXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_AXE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_SHOVEL.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_SHOVEL.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_HOE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_HOE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_GLAIVE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_GLAIVE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_GREATSWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_GREATSWORD.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_HELMET.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_HELMET.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_CHESTPLATE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_CHESTPLATE.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_LEGGINGS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_LEGGING.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_STEEL_BOOTS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
+			if (entity instanceof LivingEntity _entity) {
+				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+					ItemStack _setstack = new ItemStack(ModItems.STEEL_BOOTS.get());
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				});
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:ambient.underwater.enter block @a ~ ~ ~ 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"playsound minecraft:block.lava.extinguish block @a ~ ~ ~ 1 1 1");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle smoke ~0.5 ~1.2 ~0.5 0.25 0.25 0.25 0 25 normal");
+		}
 	}
 }

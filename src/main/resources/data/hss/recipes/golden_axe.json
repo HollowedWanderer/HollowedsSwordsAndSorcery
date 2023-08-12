@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:axe_mold"
+    },
+    {
+      "item": "hss:gold_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_golden_axe",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

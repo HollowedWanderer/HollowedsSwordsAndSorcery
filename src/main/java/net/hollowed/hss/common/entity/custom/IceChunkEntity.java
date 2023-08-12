@@ -59,6 +59,8 @@ public class IceChunkEntity extends Monster implements GeoEntity {
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
+
+    public boolean FuncOnce;
     public String animationprocedure = "empty";
 
     public IceChunkEntity(PlayMessages.SpawnEntity packet, Level world) {

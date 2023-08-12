@@ -43,9 +43,9 @@ import javax.annotation.Nullable;
 
 public class IceologerEntity extends Monster implements GeoEntity {
 
-    public static boolean casting;
-    public static boolean castingCheck;
-    public static boolean iceChunkCooldown;
+    public boolean casting;
+    public boolean castingCheck;
+    public boolean iceChunkCooldown;
 
     static boolean FuncOnce;
     public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(IceologerEntity.class, EntityDataSerializers.BOOLEAN);
@@ -128,7 +128,7 @@ public class IceologerEntity extends Monster implements GeoEntity {
     @Override
     public void baseTick() {
         super.baseTick();
-        IceologerTick.execute(this);
+        IceologerTick.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
         this.refreshDimensions();
     }
 
@@ -162,11 +162,11 @@ public class IceologerEntity extends Monster implements GeoEntity {
     }
 
     private PlayState spellPredicate(AnimationState state) {
-        if(IceologerEntity.casting) {
-            state.getController().forceAnimationReset();
-            state.getController().setAnimation(RawAnimation.begin().then("spell", Animation.LoopType.PLAY_ONCE));
-            IceologerEntity.casting = false;
-        }
+            if (casting) {
+                state.getController().forceAnimationReset();
+                state.getController().setAnimation(RawAnimation.begin().then("spell", Animation.LoopType.PLAY_ONCE));
+                casting = false;
+            }
         return PlayState.CONTINUE;
     }
 
@@ -201,6 +201,6 @@ public class IceologerEntity extends Monster implements GeoEntity {
     }
 
     protected float getSoundVolume() {
-        return 0.2F;
+        return 0.4F;
     }
 }
