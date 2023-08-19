@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hss:block/enchanter_statue_top"
+    },
+    "facing=south": {
+      "model": "hss:block/enchanter_statue_top",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/enchanter_statue_top",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "hss:block/enchanter_statue_top",
+      "y": 90
+    }
+  }
+}

@@ -35,10 +35,10 @@ public class ModItemProperties {
                     return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float)(p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / 30.0F;
                 }
             },
-                    ModItems.STAFF_OF_THUNDERING.get());
+                    ModItems.STAFF_OF_THUNDERING.get(),ModItems.ICE_WAND.get());
             addStaffPropertyOverrides(new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, "striking"),
                     (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F,
-                    ModItems.STAFF_OF_THUNDERING.get());
+                    ModItems.STAFF_OF_THUNDERING.get(),ModItems.ICE_WAND.get());
             addCrossbowPropertyOverrides(new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, "pull"), (p_174610_, p_174611_, p_174612_, p_174613_) ->
             {
                 if (p_174612_ == null) {

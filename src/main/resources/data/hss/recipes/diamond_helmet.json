@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:ancient_helmet_mold"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_diamond_helmet",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

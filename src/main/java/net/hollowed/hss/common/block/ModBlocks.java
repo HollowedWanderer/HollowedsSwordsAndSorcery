@@ -230,6 +230,12 @@ public class ModBlocks {
 
 
 
+    public static final RegistryObject<Block> SNOW_RIMMED_POLISHED_ANDESITE = registerBlock("snow_rimmed_polished_andesite",
+            SnowyAndesite::new);
+    public static final RegistryObject<Block> FROSTED_STONE_BRICKS = registerBlock("frosted_stone_bricks",
+            FrostedStoneBricks::new);
+    public static final RegistryObject<Block> SNOW_COVERED_POLISHED_ANDESITE = registerBlock("snow_covered_polished_andesite",
+            SnowyAndesite::new);
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block",
             PlatinumBlock::new);
     public static final RegistryObject<Block> MYTHRIL_BLOCK = registerBlock("mythril_block",
@@ -247,6 +253,15 @@ public class ModBlocks {
          //           .noCollission().instabreak().sound(SoundType.GRASS)
             //        .offsetType(BlockBehaviour.OffsetType.XZ)));
 
+    public static final RegistryObject<Block> ENCHANTER_STATUE = registerBlock("enchanter_statue",
+            EnchanterStatue::new);
+    public static final RegistryObject<Block> ENCHANTER_STATUE_TOP = registerBlock("enchanter_statue_top",
+            EnchanterStatueTop::new);
+
+    public static final RegistryObject<Block> SNOWY_ENCHANTER_STATUE = registerBlock("snowy_enchanter_statue",
+            SnowyEnchanterStatue::new);
+    public static final RegistryObject<Block> SNOWY_ENCHANTER_STATUE_TOP = registerBlock("snowy_enchanter_statue_top",
+            SnowyEnchanterStatueTop::new);
 
 
 
@@ -329,6 +344,54 @@ public class ModBlocks {
             MoltenSteelLeggings::new);
     public static final RegistryObject<Block> MOLTEN_STEEL_BOOTS = registerBlock("molten_steel_boots",
             MoltenSteelBoots::new);
+
+
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_SWORD = registerBlock("molten_diamond_sword",
+            MoltenDiamondSword::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_PICKAXE = registerBlock("molten_diamond_pickaxe",
+            MoltenDiamondPickaxe::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_AXE = registerBlock("molten_diamond_axe",
+            MoltenDiamondAxe::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_SHOVEL = registerBlock("molten_diamond_shovel",
+            MoltenDiamondShovel::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_HOE = registerBlock("molten_diamond_hoe",
+            MoltenDiamondHoe::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_GLAIVE = registerBlock("molten_diamond_glaive",
+            MoltenDiamondGlaive::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_GREATSWORD = registerBlock("molten_diamond_greatsword",
+            MoltenDiamondGreatsword::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_HELMET = registerBlock("molten_diamond_helmet",
+            MoltenDiamondHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_CHESTPLATE = registerBlock("molten_diamond_chestplate",
+            MoltenDiamondChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_LEGGINGS = registerBlock("molten_diamond_leggings",
+            MoltenDiamondLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_DIAMOND_BOOTS = registerBlock("molten_diamond_boots",
+            MoltenDiamondBoots::new);
+
+
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_SWORD = registerBlock("molten_platinum_sword",
+            MoltenPlatinumSword::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_PICKAXE = registerBlock("molten_platinum_pickaxe",
+            MoltenPlatinumPickaxe::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_AXE = registerBlock("molten_platinum_axe",
+            MoltenPlatinumAxe::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_SHOVEL = registerBlock("molten_platinum_shovel",
+            MoltenPlatinumShovel::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_HOE = registerBlock("molten_platinum_hoe",
+            MoltenPlatinumHoe::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_GLAIVE = registerBlock("molten_platinum_glaive",
+            MoltenPlatinumGlaive::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_GREATSWORD = registerBlock("molten_platinum_greatsword",
+            MoltenPlatinumGreatsword::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_HELMET = registerBlock("molten_platinum_helmet",
+            MoltenPlatinumHelmet::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_CHESTPLATE = registerBlock("molten_platinum_chestplate",
+            MoltenPlatinumChestplate::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_LEGGINGS = registerBlock("molten_platinum_leggings",
+            MoltenPlatinumLeggings::new);
+    public static final RegistryObject<Block> MOLTEN_PLATINUM_BOOTS = registerBlock("molten_platinum_boots",
+            MoltenPlatinumBoots::new);
 
 
 

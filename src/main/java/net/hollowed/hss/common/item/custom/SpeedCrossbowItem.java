@@ -316,7 +316,7 @@ public class SpeedCrossbowItem extends CrossbowItem {
 
     public static int getChargeDuration(ItemStack p_40940_) {
         int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.QUICK_CHARGE, p_40940_);
-        return i == 0 ? 15 : 15 - 5 * i;
+        return i == 0 ? 20 : 20 - 5 * i;
     }
 
     public UseAnim getUseAnimation(ItemStack p_40935_) {

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hss:block/molten_diamond_pickaxe",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hss:block/molten_diamond_pickaxe"
+    },
+    "facing=south": {
+      "model": "hss:block/molten_diamond_pickaxe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hss:block/molten_diamond_pickaxe",
+      "y": 270
+    }
+  }
+}

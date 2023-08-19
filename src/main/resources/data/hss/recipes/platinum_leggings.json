@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:ancient_leggings_mold"
+    },
+    {
+      "item": "hss:platinum_block"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_platinum_leggings",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

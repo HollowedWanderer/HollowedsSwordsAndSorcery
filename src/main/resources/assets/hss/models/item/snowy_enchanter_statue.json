@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "hss:item/snowy_enchanter_statue_item"
+	},
+	"display": {
+		"gui_light": "front"
+	}
+}

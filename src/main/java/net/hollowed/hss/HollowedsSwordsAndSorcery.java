@@ -235,6 +235,7 @@ public class HollowedsSwordsAndSorcery {
         if(event.getTab() == ModCreativeModeTab.SORCERY_TAB.get()) {
             event.accept(ModItems.ETERNAL_GOLDEN_CARROT);
             event.accept(ModItems.STAFF_OF_THUNDERING);
+            event.accept(ModItems.ICE_WAND);
         }
         if(event.getTab() == ModCreativeModeTab.BLOCKS_TAB.get()) {
             event.accept(ModBlocks.ALLOY_FORGE);
@@ -266,9 +267,14 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModBlocks.ANCIENT_CLAY_BRICK_WALL);
             event.accept(ModBlocks.TRIMMED_ANCIENT_CLAY);
             event.accept(ModBlocks.ANCIENT_URN);
+            event.accept(ModBlocks.SNOW_RIMMED_POLISHED_ANDESITE);
+            event.accept(ModBlocks.SNOW_COVERED_POLISHED_ANDESITE);
+            event.accept(ModBlocks.FROSTED_STONE_BRICKS);
             event.accept(ModBlocks.VERTICAL_DARK_OAK_PLANKS);
             event.accept(ModBlocks.BROWN_TERRACOTTA_SHINGLES);
             event.accept(ModBlocks.DUNGEON_DOOR);
+            event.accept(ModBlocks.ENCHANTER_STATUE);
+            event.accept(ModBlocks.SNOWY_ENCHANTER_STATUE);
         }
         if(event.getTab() == ModCreativeModeTab.ENTITIES_TAB.get()) {
             event.accept(ModItems.ICEOLOGER_SPAWN_EGG);

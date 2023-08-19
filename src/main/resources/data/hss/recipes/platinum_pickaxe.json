@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:ancient_pickaxe_mold"
+    },
+    {
+      "item": "hss:platinum_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_platinum_pickaxe",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}

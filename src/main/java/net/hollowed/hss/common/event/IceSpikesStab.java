@@ -12,7 +12,7 @@ public class IceSpikesStab {
     public static void execute(LevelAccessor world, double x, double y, double z) {
         if (world instanceof ServerLevel _level)
             _level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-                    "execute as @e[type=!hss:iceologer,type=!minecraft:vindicator,type=!minecraft:pillager,type=!minecraft:evoker,type=!minecraft:illusioner,type=!minecraft:vex,type=!minecraft:witch,distance=..2.5,gamemode=!spectator,gamemode=!creative] run damage @s 6 minecraft:stalagmite");
+                    "execute as @e[type=!hss:iceologer,type=!minecraft:item,type=!hss:ice_chunk,type=!hss:ice_spikes,distance=..2.5] run damage @s 6 minecraft:stalagmite");
     }
 }
 

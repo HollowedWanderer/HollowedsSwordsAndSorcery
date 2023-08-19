@@ -1,0 +1,18 @@
+{
+  "type": "hss:forging",
+  "ingredients": [
+    {
+      "item": "hss:ancient_hoe_mold"
+    },
+    {
+      "item": "hss:platinum_chunk"
+    }
+  ],
+  "output": {
+    "item": "hss:molten_platinum_hoe",
+    "count": 1
+  },
+  "fuel_ingredient": {
+    "tag": "hss:forge_fuel"
+  }
+}
