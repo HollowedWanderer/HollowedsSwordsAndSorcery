@@ -4,6 +4,7 @@ import net.hollowed.hss.common.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -105,6 +106,10 @@ public class SnowyEnchanterStatuePlaced {
                     }
                 }
             }
+        } else {
+            BlockPos _pos = BlockPos.containing(x, y, z);
+            Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+            world.destroyBlock(_pos, false);
         }
     }
 }

@@ -16,6 +16,10 @@ public class ModTiers {
     public static final ForgeTier ModIron = new ForgeTier(0, 250, 7.0f,
             3f, 12, BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.IRON_INGOT));
+
+    public static final ForgeTier Illager = new ForgeTier(0, 696, 7.0f,
+            3f, 12, BlockTags.NEEDS_IRON_TOOL,
+            () -> Ingredient.of(ModItems.SILVER_SCRAP.get()));
     public static final ForgeTier ModGold = new ForgeTier(0, 32, 7.0f,
             3f, 12, BlockTags.NEEDS_STONE_TOOL,
             () -> Ingredient.of(Items.GOLD_INGOT));

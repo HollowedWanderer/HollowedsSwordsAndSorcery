@@ -1,21 +1,23 @@
 package net.hollowed.hss.common.item.custom;
 
+import com.google.common.collect.Maps;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.item.ModItems;
-import net.minecraft.client.Timer;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.client.renderer.item.CompassItemPropertyFunction;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.client.renderer.item.ItemPropertyFunction;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Map;
 
 
 @EventBusSubscriber(value = Dist.CLIENT, modid = HollowedsSwordsAndSorcery.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
@@ -27,7 +29,7 @@ public class ModItemProperties {
                     (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F,
                     ModItems.STEEL_GREATSWORD.get(), ModItems.PLATINUM_GREATSWORD.get(), ModItems.WOODEN_GREATSWORD.get(),
                     ModItems.STONE_GREATSWORD.get(), ModItems.IRON_GREATSWORD.get(), ModItems.GOLDEN_GREATSWORD.get(),
-                    ModItems.DIAMOND_GREATSWORD.get(), ModItems.NETHERITE_GREATSWORD.get(), ModItems.VANGUARD_SHIELD.get());
+                    ModItems.DIAMOND_GREATSWORD.get(), ModItems.NETHERITE_GREATSWORD.get(), ModItems.VANGUARD_SHIELD.get(), ModItems.ILLAGER_KNIGHTS_GREATSWORD.get());
             addStaffPropertyOverrides(new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, "charge"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
                 if (p_174637_ == null) {
                     return 0.0F;
@@ -59,7 +61,6 @@ public class ModItemProperties {
                     ModItems.SILVER_PLATED_CROSSBOW.get());
         });
     }
-
     private static void addShieldPropertyOverrides(ResourceLocation override, ClampedItemPropertyFunction propertyGetter,
                                                    ItemLike... shields) {
         for (ItemLike shield : shields) {

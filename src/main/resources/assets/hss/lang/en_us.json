@@ -30,6 +30,8 @@
   "block.hss.ancient_urn": "Ancient Urn",
   "block.hss.clover": "Clover",
 
+  "generic.fire_damage": "Infernal Damage",
+
   "block.hss.cattail": "Cattail",
   "block.hss.mining_table": "Gem Cutter",
   "block.hss.apple_crate": "Apple Crate",
@@ -336,6 +338,7 @@
   "item.hss.wooden_greatsword": "Wooden Greatsword",
   "item.hss.stone_greatsword": "Stone Greatsword",
   "item.hss.iron_greatsword": "Iron Greatsword",
+  "item.hss.illager_knights_greatsword": "Illager Knight's Greatsword",
   "item.hss.golden_greatsword": "Golden Greatsword",
   "item.hss.diamond_greatsword": "Diamond Greatsword",
   "item.hss.netherite_greatsword": "Netherite Greatsword",

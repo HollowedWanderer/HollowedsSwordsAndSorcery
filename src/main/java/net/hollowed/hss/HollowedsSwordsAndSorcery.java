@@ -19,12 +19,14 @@ import net.hollowed.hss.common.item.ModItems;
 
 //import net.hollowed.hss.common.villager.ModVillagers;
 import net.hollowed.hss.common.enchantment.ModEnchantments;
+import net.hollowed.hss.common.item.custom.ModAttributes;
 import net.hollowed.hss.common.recipe.ModRecipes;
 import net.hollowed.hss.common.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
@@ -112,6 +114,7 @@ public class HollowedsSwordsAndSorcery {
         ModRecipes.register(modEventBus);
 
         GeckoLib.initialize();
+        ModAttributes.ATTRIBUTES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         modEventBus.addListener(this::onCommonSetup);
         modEventBus.addListener(this::onClientSetup);
@@ -138,6 +141,9 @@ public class HollowedsSwordsAndSorcery {
     private void onCommonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("Starting Common Setup...");
+
+        // Register your custom attributes here
+        // Call a method to register your attributes
 
         ModCommonSetupEvents.addModWoodTypes(event);
         //ModCommonSetupEvents.addModItemProperties(event);
@@ -189,6 +195,7 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModItems.WOODEN_CHESTPLATE_TEMPLATE);
             event.accept(ModItems.WOODEN_LEGGINGS_TEMPLATE);
             event.accept(ModItems.WOODEN_BOOTS_TEMPLATE);
+            event.accept(ModItems.ILLAGER_KNIGHTS_GREATSWORD);
             event.accept(ModItems.GREAT_HAMMER);
             event.accept(ModItems.DEATHS_SCYTHE);
             event.accept(ModItems.STEEL_SWORD);

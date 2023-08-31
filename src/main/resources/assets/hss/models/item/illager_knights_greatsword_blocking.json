@@ -1,0 +1,18 @@
+{
+	"loader": "forge:separate_transforms",
+	"gui_light": "front",
+	"base": {
+		"parent": "hss:item/illager_knights_greatsword_blocking_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "hss:item/illager_knights_greatsword_inventory"
+		},
+		"fixed": {
+			"parent": "hss:item/illager_knights_greatsword_inventory"
+		},
+		"ground": {
+			"parent": "hss:item/illager_knights_greatsword_inventory"
+		}
+	}
+}

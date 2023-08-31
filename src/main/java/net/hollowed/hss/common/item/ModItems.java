@@ -3,13 +3,13 @@ package net.hollowed.hss.common.item;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.item.custom.*;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, HollowedsSwordsAndSorcery.MOD_ID);
@@ -19,8 +19,6 @@ public class ModItems {
     public static final RegistryObject<Item> ICEOLOGER_SPAWN_EGG = ITEMS.register("iceologer_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.ICEOLOGER, 0x005bb0, 0x9cd9ff,
                     new Item.Properties()));
-
-
 
     public static final RegistryObject<Item> STAFF_OF_THUNDERING = ITEMS.register("staff_of_thundering",
             StaffOfThundering::new);
@@ -385,7 +383,7 @@ public class ModItems {
             () -> new SteelArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> STEEL_GREATSWORD = ITEMS.register("steel_greatsword",
-            () -> new BlockingSword(ModTiers.Steel, 4, -2.9f,
+            () -> new BlockingSword(ModTiers.Steel, 4, -2.8f,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive",
             () -> new HeavySwordItem(ModTiers.Steel, 1, -2.4f,
@@ -471,6 +469,10 @@ public class ModItems {
  public static final RegistryObject<Item> IRON_GREATSWORD = ITEMS.register("iron_greatsword",
          () -> new BlockingSword(ModTiers.ModIron, 4, -2.8f,
                  new Item.Properties()));
+
+    public static final RegistryObject<Item> ILLAGER_KNIGHTS_GREATSWORD = ITEMS.register("illager_knights_greatsword",
+            () -> new UniqueBlockingSword(ModTiers.Illager, 5, -2.8f, 8f,
+                    new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GREATSWORD = ITEMS.register("golden_greatsword",
          () -> new BlockingSword(ModTiers.ModGold, 2, -2.8f,
                  new Item.Properties()));

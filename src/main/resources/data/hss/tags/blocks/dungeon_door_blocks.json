@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "hss:dungeon_door_hitbox",
+    "hss:dungeon_door_open_hitbox"
+  ]
+}

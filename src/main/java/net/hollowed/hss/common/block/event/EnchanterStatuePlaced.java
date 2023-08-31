@@ -1,6 +1,7 @@
 package net.hollowed.hss.common.block.event;
 
 import net.hollowed.hss.common.block.ModBlocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -106,6 +107,10 @@ public class EnchanterStatuePlaced {
                     }
                 }
             }
+        } else {
+            BlockPos _pos = BlockPos.containing(x, y, z);
+            Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+            world.destroyBlock(_pos, false);
         }
     }
 }

@@ -1,9 +1,11 @@
 package net.hollowed.hss.common.block.custom;
 
+import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.block.event.DungeonDoorClicked;
 import net.hollowed.hss.common.block.event.DungeonDoorDestroyed;
 import net.hollowed.hss.common.block.event.DungeonDoorPlaced;
+import net.hollowed.hss.common.block.event.DungeonDoorPlacedExtra;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
