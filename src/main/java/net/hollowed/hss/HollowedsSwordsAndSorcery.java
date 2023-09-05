@@ -48,7 +48,9 @@ import software.bernie.geckolib.GeckoLib;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -64,11 +66,11 @@ public class HollowedsSwordsAndSorcery {
     public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MOD_ID, MOD_ID), () -> PROTOCOL_VERSION,
             PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
     private static int messageID = 0;
+    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
-    private static final List<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ArrayList<>();
 
     public static void queueServerWork(int tick, Runnable action) {
-        workQueue.add(new AbstractMap.SimpleEntry(action, tick));
+        workQueue.add(new AbstractMap.SimpleEntry<>(action, tick));
     }
 
     @SubscribeEvent
@@ -84,6 +86,7 @@ public class HollowedsSwordsAndSorcery {
             workQueue.removeAll(actions);
         }
     }
+
 
     private void setup(final FMLCommonSetupEvent event) {
         // Register your packet handler class

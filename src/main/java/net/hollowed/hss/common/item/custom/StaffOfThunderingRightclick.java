@@ -2,7 +2,6 @@ package net.hollowed.hss.common.item.custom;
 
 import net.hollowed.hss.common.event.LightningMarkerEvent;
 import net.hollowed.hss.common.item.ModItems;
-import net.hollowed.hss.common.mana.PlayerManaProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.telemetry.TelemetryProperty;
 import net.minecraft.commands.CommandSource;

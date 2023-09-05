@@ -471,7 +471,7 @@ public class ModItems {
                  new Item.Properties()));
 
     public static final RegistryObject<Item> ILLAGER_KNIGHTS_GREATSWORD = ITEMS.register("illager_knights_greatsword",
-            () -> new UniqueBlockingSword(ModTiers.Illager, 5, -2.8f, 8f,
+            () -> new UniqueBlockingSword(ModTiers.Illager, 5, -2.8f,
                     new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GREATSWORD = ITEMS.register("golden_greatsword",
          () -> new BlockingSword(ModTiers.ModGold, 2, -2.8f,

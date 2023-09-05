@@ -9,6 +9,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -29,14 +30,11 @@ public class UniqueBlockingSword extends SwordItem  {
     public static final int EFFECTIVE_BLOCK_DELAY = 10;
     public static final float MINIMUM_DURABILITY_DAMAGE = 3.0F;
     public static final String TAG_BASE_COLOR = "Base";
-    private static final UUID FIRE_DAMAGE_UUID = UUID.fromString("f2ac7e99-8e9e-4f62-82c9-d10510289846");
-
-    public UniqueBlockingSword(Tier p_43269_, int p_43270_, float p_43271_, double fireDamage, Properties p_43089_) {
+    public UniqueBlockingSword(Tier p_43269_, int p_43270_, float p_43271_, Properties p_43089_) {
         super(p_43269_, p_43270_, p_43271_, p_43089_);
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSE_ITEM_BEHAVIOR);
         float attackDamage = (float) p_43270_ + p_43269_.getAttackDamageBonus();
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(ModAttributes.FIRE_DAMAGE.get(), new AttributeModifier(FIRE_DAMAGE_UUID, "Weapon modifier", (double)fireDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double) attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", (double)p_43271_, AttributeModifier.Operation.ADDITION));
         Multimap<Attribute, AttributeModifier> defaultModifiers = builder.build();

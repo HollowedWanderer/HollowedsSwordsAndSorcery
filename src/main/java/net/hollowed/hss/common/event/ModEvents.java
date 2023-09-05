@@ -6,8 +6,6 @@ import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
 import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.hollowed.hss.common.item.ModItems;
-import net.hollowed.hss.common.mana.PlayerMana;
-import net.hollowed.hss.common.mana.PlayerManaProvider;
 //import net.hollowed.hss.common.villager.ModVillagers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -46,46 +44,6 @@ public class ModEvents {
                 //        new ItemStack(Items.EMERALD, 5),
                   //      stack,10,8,0.02F));
             //}
-        }
-    }
-
-    @SubscribeEvent
-    public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
-        if(event.getObject() instanceof Player) {
-            if(!event.getObject().getCapability(PlayerManaProvider.PLAYER_MANA).isPresent()) {
-                event.addCapability(new ResourceLocation(HollowedsSwordsAndSorcery.MOD_ID, "properties"), new PlayerManaProvider());
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onPlayerCloned(PlayerEvent.Clone event) {
-        if(event.isWasDeath()) {
-            event.getOriginal().getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(oldStore -> {
-                event.getOriginal().getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(newStore -> {
-                    newStore.copyFrom(oldStore);
-                });
-            });
-        }
-    }
-
-    @SubscribeEvent
-    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
-        event.register(PlayerMana.class);
-    }
-
-    @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if(event.side == LogicalSide.SERVER) {
-            event.player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
-                if(mana.getMana() > 0) {
-                    long worldTime = event.player.level().getGameTime();
-                    if(worldTime % 20 == 0) { // Once Every Second
-                        mana.subMana(1);
-                        event.player.sendSystemMessage(Component.literal("Added Mana"));
-                    }
-                }
-            });
         }
     }
     @Mod.EventBusSubscriber(modid = HollowedsSwordsAndSorcery.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

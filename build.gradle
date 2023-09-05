@@ -16,7 +16,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '0.1.0-1.20.1'
+version = '0.2.0-1.20.1'
 group = 'net.hollowed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
 java {
@@ -52,6 +52,8 @@ minecraft {
     // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             // property 'mixin.env.remapRefMap', 'true'
             // property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             // property 'mixin.env.remapRefMap', 'true'
@@ -82,6 +84,8 @@ minecraft {
         }
 
         server {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             // property 'mixin.env.remapRefMap', 'true'
             // property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             // property 'mixin.env.remapRefMap', 'true'
@@ -149,6 +153,11 @@ repositories {
     // JEI fall back
     maven { name = "ModMaven";          url = "https://modmaven.dev" }
 
+    maven {
+        name "KosmX's maven"
+        url 'https://maven.kosmx.dev/'
+    }
+
     // Maven via Curse-Maven & CurseForge
     maven { name = "Curese Mavem";      url = "https://cursemaven.com"; content { includeGroup "curse.maven" } }
     maven { name = "CurseForge";        url = "https://minecraft.curseforge.com/api/maven/" }
@@ -163,6 +172,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.20.1-47.0.1'
+    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -178,7 +188,7 @@ dependencies {
 
     //runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5")
     //compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.1-5.1.0.5:api")
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20:4.2')
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
 
     // implementation fg.deobf('maven.modrinth:better-combat:1.5.3+1.19-forge')
     // implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.1+1.19.3")
