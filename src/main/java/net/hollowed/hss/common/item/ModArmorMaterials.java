@@ -25,6 +25,14 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }), 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.STEEL_INGOT.get());
     }),
+    DIAMOND("diamond", 33, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266649_) -> {
+        p_266649_.put(ArmorItem.Type.BOOTS, 3);
+        p_266649_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266649_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266649_.put(ArmorItem.Type.HELMET, 3);
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+        return Ingredient.of(Items.DIAMOND);
+    }),
     PLATINUM("platinum", 37,Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.BOOTS, 3);
         p_266655_.put(ArmorItem.Type.LEGGINGS, 6);

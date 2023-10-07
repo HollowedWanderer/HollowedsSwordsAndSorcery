@@ -32,7 +32,7 @@ displayName="Hollowed's Swords & Sorcery" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="holloweds_mods_icon.png" #optional
 # A text field displayed in the mod UI
-credits="Some help from DancerVLT69" #optional
+credits="Some help from DancerVLT69 and a texture from this resource pack: https://modrinth.com/resourcepack/tacos-rainbow-xp-bar/version/1.19.4?hl=en-US" #optional
 # A text field displayed in the mod UI
 authors="HollowedWanderer" #optional
 # Display Test controls the display for your mod in the server connection screen

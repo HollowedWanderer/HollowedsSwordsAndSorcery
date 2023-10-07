@@ -3,8 +3,10 @@ package net.hollowed.hss.common.item;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.item.custom.*;
-import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -352,6 +354,10 @@ public class ModItems {
     public static final RegistryObject<Item> LEGENDARY_KEY = ITEMS.register("legendary_key",
             () -> new EdibleKeyItem(new Item.Properties().stacksTo(64)));
 
+    public static final RegistryObject<Item> HORNED_DIAMOND_HELMET = ITEMS.register("horned_diamond_helmet",
+            () -> new DiamondArmorItem(ModArmorMaterials.DIAMOND, ArmorItem.Type.HELMET,
+                    new Item.Properties().fireResistant()));
+
 
     public static final RegistryObject<Item> PLATINUM = ITEMS.register("platinum",
             () -> new Item(new Item.Properties().stacksTo(64)));
@@ -452,7 +458,7 @@ public class ModItems {
             () -> new HeavySwordItem(ModTiers.ModIron, 1, -2.4f,
                     new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive",
-         () -> new HeavySwordItem(ModTiers.ModGold, -1, -2.4f,
+         () -> new HeavySwordItem(ModTiers.ModGold, 1, -2.4f,
                  new Item.Properties()));
     public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive",
             () -> new HeavySwordItem(ModTiers.ModDiamond, 2, -2.4f,
@@ -470,11 +476,15 @@ public class ModItems {
          () -> new BlockingSword(ModTiers.ModIron, 4, -2.8f,
                  new Item.Properties()));
 
+    public static final RegistryObject<Item> VIRIDIS_BLADE = ITEMS.register("viridis_blade",
+            () -> new ViridisBlade(ModTiers.ModNetherite, 8, -2.8f,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> ILLAGER_KNIGHTS_GREATSWORD = ITEMS.register("illager_knights_greatsword",
             () -> new UniqueBlockingSword(ModTiers.Illager, 5, -2.8f,
                     new Item.Properties()));
  public static final RegistryObject<Item> GOLDEN_GREATSWORD = ITEMS.register("golden_greatsword",
-         () -> new BlockingSword(ModTiers.ModGold, 2, -2.8f,
+         () -> new BlockingSword(ModTiers.ModGold, 4, -2.8f,
                  new Item.Properties()));
  public static final RegistryObject<Item> DIAMOND_GREATSWORD = ITEMS.register("diamond_greatsword",
          () -> new BlockingSword(ModTiers.ModDiamond, 5, -2.8f,

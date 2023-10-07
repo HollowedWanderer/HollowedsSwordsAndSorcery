@@ -3,7 +3,11 @@
   "biomes": [
     "savanna_plateau",
     "savanna",
-    "windswept_savanna"
+    "windswept_savanna",
+    "dark_forest",
+    "jungle",
+    "bamboo_jungle",
+    "sparse_jungle"
   ],
   "features": "hss:coarse_dirt_patch",
   "step": "vegetal_decoration"

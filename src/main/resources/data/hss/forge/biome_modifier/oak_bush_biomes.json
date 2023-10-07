@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "flower_forest",
+    "forest"
+  ],
+  "features": "hss:oak_bush",
+  "step": "top_layer_modification"
+}

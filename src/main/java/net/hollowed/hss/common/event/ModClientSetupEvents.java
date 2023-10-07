@@ -1,13 +1,10 @@
 package net.hollowed.hss.common.event;
 
-import net.hollowed.hss.common.block.entity.ModWoodTypes;
 import net.hollowed.hss.common.entity.ModEntityTypes;
-import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
 import net.hollowed.hss.common.entity.client.IceChunkRenderer;
 import net.hollowed.hss.common.entity.client.IceSpikesRenderer;
 import net.hollowed.hss.common.entity.client.IceologerRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.common.Mod;

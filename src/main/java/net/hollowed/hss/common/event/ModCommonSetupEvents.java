@@ -1,17 +1,5 @@
 package net.hollowed.hss.common.event;
 
-import net.hollowed.hss.common.block.entity.ModWoodTypes;
-import net.hollowed.hss.common.entity.ModEntityTypes;
-import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.hollowed.hss.common.entity.custom.IceologerEntity;
-import net.hollowed.hss.common.item.ModItems;
-//import net.hollowed.hss.common.item.custom.ParagliderItem;
-//import net.hollowed.hss.common.villager.ModVillagers;
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.client.renderer.item.ItemPropertyFunction;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

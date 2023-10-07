@@ -6,10 +6,8 @@ import net.hollowed.hss.common.block.entity.ModBlockEntities;
 import net.hollowed.hss.common.client.particle.ModParticleTypes;
 import net.hollowed.hss.common.effect.ModEffects;
 import net.hollowed.hss.common.entity.ModEntityTypes;
-import net.hollowed.hss.common.entity.client.DeepslateGolemRenderer;
 import net.hollowed.hss.common.entity.client.IceSpikesRenderer;
 import net.hollowed.hss.common.entity.client.IceologerRenderer;
-import net.hollowed.hss.common.event.DamageHandler;
 import net.hollowed.hss.common.event.ModClientSetupEvents;
 import net.hollowed.hss.common.event.ModCommonSetupEvents;
 import net.hollowed.hss.common.gui.AlloyForgeScreen;
@@ -24,20 +22,16 @@ import net.hollowed.hss.common.recipe.ModRecipes;
 import net.hollowed.hss.common.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 import org.slf4j.Logger;
@@ -51,9 +45,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HollowedsSwordsAndSorcery.MOD_ID)
@@ -241,11 +232,13 @@ public class HollowedsSwordsAndSorcery {
             event.accept(ModItems.DIAMOND_GREATSWORD);
             event.accept(ModItems.NETHERITE_GREATSWORD);
             event.accept(ModItems.VANGUARD_SHIELD);
+            event.accept(ModItems.HORNED_DIAMOND_HELMET);
         }
         if(event.getTab() == ModCreativeModeTab.SORCERY_TAB.get()) {
             event.accept(ModItems.ETERNAL_GOLDEN_CARROT);
             event.accept(ModItems.STAFF_OF_THUNDERING);
             event.accept(ModItems.ICE_WAND);
+            event.accept(ModItems.VIRIDIS_BLADE);
         }
         if(event.getTab() == ModCreativeModeTab.BLOCKS_TAB.get()) {
             event.accept(ModBlocks.ALLOY_FORGE);
@@ -305,12 +298,4 @@ public class HollowedsSwordsAndSorcery {
     //            () -> new SlotTypeMessage.Builder("feet")
      //                   .priority(220).icon(InventoryMenu.EMPTY_ARMOR_SLOT_BOOTS).build());
    // }
-
-   public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder,
-                                             Function<FriendlyByteBuf, T> decoder,
-                                             BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
-        PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
-        messageID++;
-    }
-
 }

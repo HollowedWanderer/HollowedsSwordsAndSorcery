@@ -344,9 +344,14 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_SWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_SWORD);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_sword\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Sword\",\"italic\":false}'}," +
+										"HideFlags:4,Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\"," +
+										"Amount:6,Operation:0,UUID:[I;-953882258,-1281998023,-1545639607,-896263253],Slot:\"mainhand\"},{AttributeName:\"generic.attack_speed\"," +
+										"Name:\"generic.attack_speed\",Amount:-2.4,Operation:0,UUID:[I;-1231183675,1908032206,-1995076278,1608875291],Slot:\"mainhand\"}]}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -364,9 +369,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_PICKAXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_PICKAXE);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_pickaxe\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Pickaxe\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -384,9 +391,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_AXE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_AXE);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_axe\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Axe\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -404,9 +413,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_SHOVEL.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_SHOVEL);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_shovel\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Shovel\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -424,9 +435,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_HOE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_HOE);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_hoe\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Hoe\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -444,9 +457,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_GLAIVE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(ModItems.GOLDEN_GLAIVE.get());
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"hss:golden_glaive\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Glaive\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -464,9 +479,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_GREATSWORD.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(ModItems.GOLDEN_GREATSWORD.get());
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"hss:golden_greatsword\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Greatsword\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -484,9 +501,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_HELMET.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_HELMET);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_helmet\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Helmet\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -504,9 +523,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_CHESTPLATE.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_CHESTPLATE);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_chestplate\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Chestplate\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -524,9 +545,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_LEGGINGS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_LEGGINGS);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_leggings\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Leggings\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
@@ -544,9 +567,11 @@ public class ItemCooledEvent {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ModItems.SHAPED_MOLTEN_GOLDEN_BOOTS.get() && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 			if (entity instanceof LivingEntity _entity) {
 				HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
-					ItemStack _setstack = new ItemStack(Items.GOLDEN_BOOTS);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					LivingEntity _livEnt = (LivingEntity) entity;
+					_livEnt.getMainHandItem().setCount(0);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/summon item ~0.5 ~1 ~0.5 {Motion:[0.0,0.4,0.0],Item:{id:\"minecraft:golden_boots\",Count:1b,tag:{display:{Name:'{\"text\":\"Refined Golden Boots\",\"italic\":false}'},HideFlags:4,Unbreakable:1b}}}");
 				});
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();

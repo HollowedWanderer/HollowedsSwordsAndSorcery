@@ -3,7 +3,6 @@ package net.hollowed.hss.common.entity.custom;
 import net.hollowed.hss.common.entity.ModEntityTypes;
 import net.hollowed.hss.common.event.IceChunkSpawn;
 import net.hollowed.hss.common.event.IceChunkTick;
-import net.hollowed.hss.common.event.IceologerTick;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;

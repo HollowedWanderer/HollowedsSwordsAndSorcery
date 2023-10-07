@@ -28,6 +28,9 @@ public class IceologerTagReset {
     private static void execute(@Nullable Event event, Entity entity) {
         if (entity == null)
             return;
+        HollowedsSwordsAndSorcery.queueServerWork(1, () -> {
+            entity.getPersistentData().putBoolean("GoldHeal", false);
+        });
         HollowedsSwordsAndSorcery.queueServerWork(30, () -> {
             {
                 if (!entity.level().isClientSide() && entity.getServer() != null) {

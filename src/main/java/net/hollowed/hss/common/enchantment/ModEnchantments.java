@@ -23,6 +23,9 @@ public class ModEnchantments {
     public static RegistryObject<Enchantment> CURSE_OF_SHATTERING =
             ENCHANTMENTS.register("curse_of_shattering",
                     () -> new CurseOfShattering(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.values()));
+    public static RegistryObject<Enchantment> GILDED_RESILIENCE =
+            ENCHANTMENTS.register("gilded_resilience",
+                    () -> new GildedResilience(Enchantment.Rarity.UNCOMMON));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

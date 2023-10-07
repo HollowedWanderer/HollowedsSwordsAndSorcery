@@ -1,0 +1,43 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "hss:item/viridis_blade"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [90, 0, -135],
+			"translation": [0, -1.5, -17],
+			"scale": [2, 2, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [90, 0, 135],
+			"translation": [0, -1.5, -17],
+			"scale": [2, 2, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [-85, 180, 45],
+			"translation": [-9, 4, 1],
+			"scale": [2, 2, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-85, 180, -45],
+			"translation": [-9.05, 4, 1],
+			"scale": [2, 2, 1]
+		},
+		"ground": {
+			"translation": [0, 6, 0]
+		},
+		"gui": {
+			"translation": [2.75, 2.75, 0],
+			"scale": [1.25, 1.25, 1]
+		},
+		"head": {
+			"scale": [2, 2, 1]
+		},
+		"fixed": {
+			"rotation": [0, 0, 90],
+			"translation": [-2.75, 2.75, 0],
+			"scale": [1.25, 1.25, 1]
+		}
+	}
+}

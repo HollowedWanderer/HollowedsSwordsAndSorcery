@@ -50,12 +50,12 @@ public class UniqueBlockingSword extends SwordItem  {
         BannerItem.appendHoverTextFromBannerBlockEntityTag(p_43094_, p_43096_);
     }
 
-    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack p_43105_) {
-        return UseAnim.BLOCK;
-    }
-
     public int getUseDuration(@NotNull ItemStack p_43107_) {
         return 72000;
+    }
+
+    public UseAnim getUseAnimation(ItemStack p_43105_) {
+        return UseAnim.BLOCK;
     }
 
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level p_43099_, Player p_43100_, @NotNull InteractionHand p_43101_) {

@@ -1,23 +1,6 @@
 package net.hollowed.hss.common.event;
 
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
-import net.hollowed.hss.common.entity.ModEntityTypes;
-import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
-import net.hollowed.hss.common.entity.custom.IceologerEntity;
-import net.hollowed.hss.common.item.ModItems;
-//import net.hollowed.hss.common.villager.ModVillagers;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;

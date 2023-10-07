@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "birch_forest",
+    "old_growth_birch_forest"
+  ],
+  "features": "hss:birch_bush",
+  "step": "top_layer_modification"
+}

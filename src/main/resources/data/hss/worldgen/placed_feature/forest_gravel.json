@@ -6,8 +6,8 @@
       "count": {
         "type": "uniform",
         "value": {
-          "min_inclusive": 3,
-          "max_inclusive": 4
+          "min_inclusive": 1,
+          "max_inclusive": 1
         }
       }
     },
@@ -22,7 +22,7 @@
           "absolute": 55
         },
         "max_inclusive": {
-          "absolute": 150
+          "absolute": 180
         }
       }
     },

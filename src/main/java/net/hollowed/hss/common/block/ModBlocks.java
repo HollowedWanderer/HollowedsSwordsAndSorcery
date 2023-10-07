@@ -5,6 +5,7 @@ import net.hollowed.hss.common.block.custom.*;
 //import net.hollowed.hss.common.block.entity.custom.AlloyForgeBlock;
 import net.hollowed.hss.common.block.entity.custom.AlloyForgeBlock;
 import net.hollowed.hss.common.item.ModItems;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -253,6 +254,12 @@ public class ModBlocks {
          //           .noCollission().instabreak().sound(SoundType.GRASS)
             //        .offsetType(BlockBehaviour.OffsetType.XZ)));
 
+    public static final RegistryObject<Block> BRAMBLE = registerBlock("bramble",
+             () -> new Bramble(MobEffects.DIG_SLOWDOWN, 10, BlockBehaviour.Properties.copy(Blocks.GRASS)
+                   .noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> MISTLEAF_LILY = registerBlock("mistleaf_lily",
+            () -> new MistleafLily(MobEffects.DIG_SLOWDOWN, 10, BlockBehaviour.Properties.copy(Blocks.LILY_OF_THE_VALLEY)
+                    .noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> ENCHANTER_STATUE = registerBlock("enchanter_statue",
             EnchanterStatue::new);
     public static final RegistryObject<Block> ENCHANTER_STATUE_TOP = registerBlock("enchanter_statue_top",
@@ -262,7 +269,6 @@ public class ModBlocks {
             SnowyEnchanterStatue::new);
     public static final RegistryObject<Block> SNOWY_ENCHANTER_STATUE_TOP = registerBlock("snowy_enchanter_statue_top",
             SnowyEnchanterStatueTop::new);
-
 
 
 
@@ -415,6 +421,10 @@ public class ModBlocks {
             () -> new EmptyTempleStatue(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(4f).requiresCorrectToolForDrops().noOcclusion()
                     .sound(SoundType.POLISHED_DEEPSLATE)));
+
+    public static final RegistryObject<Block> LOAM = registerBlock("loam",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD).sound(SoundType.MUD)
+                    .strength(0.5f)));
 
     public static final RegistryObject<Block> DUNGEON_STEEL = registerBlock("dungeon_steel",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()

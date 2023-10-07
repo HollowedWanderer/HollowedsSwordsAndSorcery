@@ -5,6 +5,9 @@
     "hss:mythril_block",
     "hss:silver_block",
     "hss:infernium_block",
-    "hss:zephyrite_block"
+    "hss:zephyrite_block",
+    "minecraft:netherrack",
+    "minecraft:nether_quartz_ore",
+    "minecraft:nether_gold_ore"
   ]
 }

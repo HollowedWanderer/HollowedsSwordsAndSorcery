@@ -19,7 +19,7 @@ public class DamageHandler {
             DamageSource source = event.getSource(); // what caused the damage
             float amount = event.getAmount(); // amount of damage taken
             if (player.hasEffect(ModEffects.SILVER_SHIELD.get()) && silverShieldShouldAffect(source)) {
-                event.setAmount(amount * 0.7f); // sets the amount of damage taken to
+                event.setAmount(amount * 0.5f); // sets the amount of damage taken to
                 // 80% of its original value
             }
         }

@@ -1,22 +1,11 @@
 package net.hollowed.hss.common.event;
 
-import com.mojang.datafixers.types.Func;
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.entity.custom.IceChunkEntity;
 import net.hollowed.hss.common.entity.custom.IceologerEntity;
-import net.minecraft.commands.CommandSource;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.Vec3;
 
 public class IceChunkTick {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

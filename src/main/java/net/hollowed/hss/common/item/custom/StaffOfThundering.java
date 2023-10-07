@@ -1,6 +1,7 @@
 package net.hollowed.hss.common.item.custom;
 
 
+import net.hollowed.hss.common.event.TridentThrow;
 import net.hollowed.hss.common.item.ModCreativeModeTab;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -49,6 +50,7 @@ public class StaffOfThundering extends SwordItem {
 
                 new Item.Properties().rarity(Rarity.RARE));
     }
+
 
     boolean charged;
 

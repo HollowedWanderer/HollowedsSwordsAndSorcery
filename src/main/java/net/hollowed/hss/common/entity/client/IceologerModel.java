@@ -1,7 +1,6 @@
 package net.hollowed.hss.common.entity.client;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
-import net.hollowed.hss.common.entity.custom.DeepslateGolemEntity;
 import net.hollowed.hss.common.entity.custom.IceologerEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;

@@ -9,8 +9,10 @@
 
   "effect.hss.silver_shield": "Silver Shield",
   "enchantment.hss.curse_of_shattering": "Curse of Shattering",
+  "enchantment.hss.gilded_resilience": "Gilded Resilience",
 
   "block.minecraft.enchanting_table": "Enchantment Table",
+  "block.hss.loam": "Loam",
   "block.hss.snow_rimmed_polished_andesite": "Snow Rimmed Polished Andesite",
   "block.hss.snow_covered_polished_andesite": "Snow Covered Polished Andesite",
   "block.hss.enchanter_statue": "Enchanter Statue",
@@ -111,6 +113,9 @@
   "block.hss.bewitchment_table": "Bewitchment Table",
 
   "block.hss.dungeon_door": "Dungeon Door",
+  "block.hss.mistleaf_lily": "Mistleaf Lily",
+
+  "item.hss.horned_diamond_helmet": "Horned Diamond Helmet",
 
   "item.hss.blank_clay_tablet": "Blank Clay Tablet",
   "item.hss.sword_mold": "Sword Mold",
@@ -339,6 +344,7 @@
   "item.hss.stone_greatsword": "Stone Greatsword",
   "item.hss.iron_greatsword": "Iron Greatsword",
   "item.hss.illager_knights_greatsword": "Illager Knight's Greatsword",
+  "item.hss.viridis_blade": "Viridis Blade",
   "item.hss.golden_greatsword": "Golden Greatsword",
   "item.hss.diamond_greatsword": "Diamond Greatsword",
   "item.hss.netherite_greatsword": "Netherite Greatsword",

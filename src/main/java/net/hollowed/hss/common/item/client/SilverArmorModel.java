@@ -2,7 +2,6 @@ package net.hollowed.hss.common.item.client;
 
 import net.hollowed.hss.HollowedsSwordsAndSorcery;
 import net.hollowed.hss.common.item.custom.SilverArmorItem;
-import net.hollowed.hss.common.item.custom.SteelArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 
