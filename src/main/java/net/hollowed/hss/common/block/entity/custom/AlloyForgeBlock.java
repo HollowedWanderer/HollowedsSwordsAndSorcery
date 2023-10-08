@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class AlloyForgeBlock extends BaseEntityBlock {
     public AlloyForgeBlock() {
-        super(BlockBehaviour.Properties.of().strength(3.5f, 5f).requiresCorrectToolForDrops());
+        super(Properties.of().strength(3.5f, 5f).requiresCorrectToolForDrops());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
